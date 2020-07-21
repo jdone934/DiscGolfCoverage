@@ -42,7 +42,3 @@ Given that this website will be a hub for watching Disc Golf coverage, I also pl
 * [Screen Design (External Page to Moqups Project)]()
 * [Application Flow](DesignDocuments/applicationFlow.md)
 * [Database Design (External Page to Draw.io Diagram)]()
-
-### [Project Plan](ProjectPlan.md)
-
-### [Weekly Refelection](WeeklyReflection.md) 
