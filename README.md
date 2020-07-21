@@ -39,12 +39,9 @@ Given that this website will be a hub for watching Disc Golf coverage, I also pl
 ### Design
 
 * [User Stories](DesignDocuments/userStories.md)
-* [Screen Design (External Page to Moqups Project)](https://app.moqups.com/PwlaN4YYza/view/page/aa9df7b72)
+* [Screen Design (External Page to Moqups Project)]()
 * [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design (External Page to Draw.io Diagram)](https://drive.google.com/file/d/1Xa2Qe7GLNbkUfWn-g1wTmdzZB7NCPQyq/view?usp=sharing)
-* [Database Design (External Page to Draw.io Diagram)](https://drive.google.com/file/d/1Xa2Qe7GLNbkUfWn-g1wTmdzZB7NCPQyq/view?usp=sharing)
-* [Servlet UML Diagram](DesignDocuments/ServletUML.png)
-* [Video Demonstration](screenrec.com/share/zQU19PWmRh)
+* [Database Design (External Page to Draw.io Diagram)]()
 
 ### [Project Plan](ProjectPlan.md)
 
