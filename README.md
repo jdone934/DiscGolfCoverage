@@ -38,7 +38,7 @@ Given that this website will be a hub for watching Disc Golf coverage, I also pl
 
 ### Design
 
-* [User Stories (Coming Soon)](#)
+* [User Stories](DesignDocuments/UserStories.md)
 * [Screen Design (External Page to Moqups Project)](https://app.moqups.com/l2WTePQyn5/view/page/a07bad052)
 * [Application Flow (Coming Soon)](#)
 * [Database Design (Coming Soon)]()
