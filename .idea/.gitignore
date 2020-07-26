@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+
+#User-specific files
+.idea/workspace.xml
+
+/#Logs
+/logs
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
