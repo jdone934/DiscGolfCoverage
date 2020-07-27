@@ -25,8 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74f9535-17e8-4bd8-ae18-d9f10cec4ca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignDocuments/UserStories.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignDocuments/ApplicationFlow.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595798701002</updated>
       <workItem from="1595798702083" duration="3716000" />
+      <workItem from="1595806429100" duration="2476000" />
     </task>
     <servers />
   </component>
@@ -168,6 +168,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="341" y="1328" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595798862999">
