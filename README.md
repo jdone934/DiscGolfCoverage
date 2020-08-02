@@ -41,4 +41,4 @@ Given that this website will be a hub for watching Disc Golf coverage, I also pl
 * [User Stories](DesignDocuments/UserStories.md)
 * [Screen Design (External Page to Moqups Project)](https://app.moqups.com/l2WTePQyn5/view/page/a07bad052)
 * [Application Flow](DesignDocuments/ApplicationFlow.md)
-* [Database Design (Coming Soon)]()
+* [Database Design](https://drive.google.com/file/d/14ej-CJ_4oLSH1e3STwsu2U9QL7ziPUko/view?usp=sharing)

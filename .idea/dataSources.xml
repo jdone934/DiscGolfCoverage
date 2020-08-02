@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="disc_golf_coverage@localhost" uuid="c6e7184d-9b42-46b8-b4eb-b4dd55463bff">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/disc_golf_coverage</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test_disc_golf_coverage@localhost" uuid="9232b95c-3485-48ca-9781-b9c744895b40">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test_disc_golf_coverage</jdbc-url>
+    </data-source>
+  </component>
+</project>
