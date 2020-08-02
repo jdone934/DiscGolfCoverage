@@ -1,10 +1,21 @@
 <html>
 <head>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <%@ page isELIgnored="false"%>
+    <%@include file="template/head.jsp" %>
 </head>
 <body>
-<h2>Hello World!</h2>
+<div class="container-fluid">
+    <%@include file="template/navbar.jsp"%>
+
+    <h1>Find Coverage</h1>
+
+    <form id="findCoverage" method="post" action="searchCoverage" class="" onsubmit="">
+        <div id="errorMessage"></div>
+        <div class="form-group">
+            <label for="searchType">Search Type</label>
+            <input type="text" class="form-control" name="searchType" id="searchType" required>
+        </div>
+
+</div>
+</body>
 </body>
 </html>

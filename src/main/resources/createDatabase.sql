@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS favorite_courses;
+DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS favorite_tournaments;
 DROP TABLE IF EXISTS favorite_rounds;
 DROP TABLE IF EXISTS favorite_players;

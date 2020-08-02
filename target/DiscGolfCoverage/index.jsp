@@ -1,12 +1,10 @@
 <html>
 <head>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <%@ page isELIgnored="false"%>
+    <%@include file="template/head.jsp" %>
 </head>
 <body>
-<h2>Hello World!</h2>
-<c:set var="testvar" value="37" />
-<h3>Value in variable: ${testvar}</h3>
+<div class="container-fluid">
+    <%@include file="template/navbar.jsp"%>
+</div>
 </body>
 </html>
