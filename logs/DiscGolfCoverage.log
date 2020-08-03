@@ -54,3 +54,22 @@
 [INFO ] 2020-08-02 22:57:28.901 [http-nio-8080-exec-10] SearchCoverage - Result size: 1
 [INFO ] 2020-08-02 22:57:28.903 [http-nio-8080-exec-10] SearchCoverage - Player found first name: Ricky last name: Wysocki
 [INFO ] 2020-08-02 22:57:28.903 [http-nio-8080-exec-10] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:01:45.583 [http-nio-8080-exec-5] SearchCoverage - First Name: Ricky
+[INFO ] 2020-08-02 23:01:45.584 [http-nio-8080-exec-5] SearchCoverage - Last Name: 
+[INFO ] 2020-08-02 23:01:45.586 [http-nio-8080-exec-5] SearchCoverage - Result size: 0
+[INFO ] 2020-08-02 23:01:45.586 [http-nio-8080-exec-5] SearchCoverage - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-02 23:01:51.041 [http-nio-8080-exec-6] SearchCoverage - First Name: Ricky
+[INFO ] 2020-08-02 23:01:51.041 [http-nio-8080-exec-6] SearchCoverage - Last Name: Wysocki
+[INFO ] 2020-08-02 23:01:51.043 [http-nio-8080-exec-6] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:01:51.043 [http-nio-8080-exec-6] SearchCoverage - Player found first name: Ricky last name: Wysocki
+[INFO ] 2020-08-02 23:01:51.043 [http-nio-8080-exec-6] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:05:48.330 [http-nio-8080-exec-2] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:05:48.336 [http-nio-8080-exec-2] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:15:31.507 [http-nio-8080-exec-1] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:15:31.512 [http-nio-8080-exec-1] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:15:53.297 [http-nio-8080-exec-9] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:15:53.297 [http-nio-8080-exec-9] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:17:36.789 [http-nio-8080-exec-10] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:17:36.794 [http-nio-8080-exec-10] SearchCoverage - Search for player with first name Ricky and last name Wysocki
+[INFO ] 2020-08-02 23:20:31.015 [http-nio-8080-exec-2] SearchCoverage - Result size: 1
+[INFO ] 2020-08-02 23:20:31.020 [http-nio-8080-exec-2] SearchCoverage - Search for player with first name Ricky and last name Wysocki

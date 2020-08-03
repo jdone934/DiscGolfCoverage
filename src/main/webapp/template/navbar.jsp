@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <nav class="navbar navbar-expand-sm navbar-dark">
-    <a href="${pageContext.request.requestURI}" id="homeLink">Disc Golf Coverage</a>
+    <a href="/DiscGolfCoverage" id="homeLink">Disc Golf Coverage</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
