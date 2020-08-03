@@ -8,7 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import com.doney.testUtils.Database;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RoundDaoTest {
     GenericDao roundDao;
@@ -30,5 +32,37 @@ public class RoundDaoTest {
         Round expectedRound = new Round(1, 2, "testLink", "JomezPro");
 
         assertEquals(expectedRound, retrievedRound);
+    }
+
+    @Test
+    void insertSuccess() {
+        Round newRound = new Round(2, "testLinkBack9", "JomezPro");
+        int id = roundDao.insert(newRound);
+        assertNotEquals(0, id);
+        newRound.setRoundId(id);
+        Round roundAfterInsert = (Round) roundDao.getById(id);
+        assertEquals(newRound, roundAfterInsert);
+    }
+
+    @Test
+    void updateSuccess() {
+        Round expectedRound = new Round(2, "newTestLink", "JomezPro");
+        Round roundToUpdate = (Round) roundDao.getById(1);
+        roundToUpdate.setCoverageLink("newTestLink");
+        roundDao.saveOrUpdate(roundToUpdate);
+        Round roundAfterUpdate = (Round) roundDao.getById(1);
+        assertEquals(expectedRound, roundAfterUpdate);
+    }
+
+    @Test
+    void deleteSuccess() {
+        roundDao.delete(roundDao.getById(1));
+        assertNull(roundDao.getById(1));
+    }
+
+    @Test
+    void getAllSuccess() {
+        List<Round> rounds = roundDao.getAll();
+        assertEquals(1, rounds.size());
     }
 }

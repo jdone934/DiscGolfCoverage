@@ -29,6 +29,12 @@ public class Round {
     public Round() {
     }
 
+    public Round(Integer roundNumber, String coverageLink, String coverageProvider) {
+        this.roundNumber = roundNumber;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+    }
+
     public Round (Integer roundId, Integer roundNumber, String coverageLink, String coverageProvider) {
         this.roundId = roundId;
         this.roundNumber = roundNumber;
@@ -73,8 +79,7 @@ public class Round {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Round round = (Round) o;
-        return roundId.equals(round.roundId) &&
-                roundNumber.equals(round.roundNumber) &&
+        return roundNumber.equals(round.roundNumber) &&
                 coverageLink.equals(round.coverageLink) &&
                 coverageProvider.equals(round.coverageProvider);
     }
