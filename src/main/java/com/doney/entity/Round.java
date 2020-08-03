@@ -1,23 +1,40 @@
 package com.doney.entity;
 
-import javax.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
-@Entity
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.Objects;
+
+@Entity(name = "Round")
 @Table(name = "round")
 public class Round {
     @Id
-    @Column(name = "roundId")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Integer roundId;
 
+    @NotNull
     @Column(name = "round_number")
     private Integer roundNumber;
 
+    @NotNull
     @Column(name = "coverage_link")
     private String coverageLink;
 
+    @NotNull
     @Column(name = "coverage_provider")
     private String coverageProvider;
 
+    public Round() {
+    }
+
+    public Round (Integer roundId, Integer roundNumber, String coverageLink, String coverageProvider) {
+        this.roundId = roundId;
+        this.roundNumber = roundNumber;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+    }
 
     public Integer getRoundId() {
         return this.roundId;
@@ -49,5 +66,21 @@ public class Round {
 
     public void setCoverageProvider(String coverageProvider) {
         this.coverageProvider = coverageProvider;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Round round = (Round) o;
+        return roundId.equals(round.roundId) &&
+                roundNumber.equals(round.roundNumber) &&
+                coverageLink.equals(round.coverageLink) &&
+                coverageProvider.equals(round.coverageProvider);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roundId, roundNumber, coverageLink, coverageProvider);
     }
 }

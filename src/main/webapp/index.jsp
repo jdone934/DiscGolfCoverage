@@ -12,9 +12,16 @@
         <div id="errorMessage"></div>
         <div class="form-group">
             <label for="searchType">Search Type</label>
-            <input type="text" class="form-control" name="searchType" id="searchType" required>
+            <select id="searchType" class="form-control" name="searchType">
+                <option value="player">Player</option>
+                <option value="tournament">Tournament</option>
+                <option value="course">Course</option>
+                <option value="year">Year</option>
+            </select>
         </div>
 
+        <button type="submit" id="submitButton" class="btn btn-primary">Search</button>
+    </form>
 </div>
 </body>
 </body>

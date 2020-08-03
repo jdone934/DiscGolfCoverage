@@ -162,3 +162,7 @@ CREATE TABLE commentators (
         REFERENCES `round` (`roundId`)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+INSERT INTO
+    round (roundId, round_number, coverage_link, coverage_provider)
+    VALUES (1, 2, 'testLink', 'JomezPro');
