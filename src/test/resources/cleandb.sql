@@ -64,6 +64,7 @@ CREATE TABLE player (
     `playerId` int(10) NOT NULL AUTO_INCREMENT,
     `first_name` varchar(50) NOT NULL,
     `last_name` varchar(50) NOT NULL,
+    `profile_picture` varchar(200),
     PRIMARY KEY (`playerId`)
 );
 
@@ -166,3 +167,7 @@ CREATE TABLE commentators (
 INSERT INTO
     round (roundId, round_number, coverage_link, coverage_provider)
     VALUES (1, 2, 'testLink', 'JomezPro');
+
+INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg');
