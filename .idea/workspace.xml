@@ -25,16 +25,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74f9535-17e8-4bd8-ae18-d9f10cec4ca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/style/master.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/JPAMappingSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/POJOGeneratorSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/FavoriteCourses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/FavoritePlayers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/FavoriteRounds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/FavoriteTournaments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/PlayersInRound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Round.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/RoundsInTournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Tournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/TournamentAtCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/log4j-api-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/log4j-core-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +53,7 @@
       <list>
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,6 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/doney/entity" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -82,15 +91,37 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="TomEE Server.TomEE 8.5.55">
+  <component name="RunManager" selected="Database Script.createDatabase.sql">
     <configuration name="createDatabase.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/createDatabase.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="c6e7184d-9b42-46b8-b4eb-b4dd55463bff" namespace="schema/&quot;disc_golf_coverage&quot;" />
       <data-source id="9232b95c-3485-48ca-9781-b9c744895b40" namespace="schema/&quot;test_disc_golf_coverage&quot;" />
       <method v="2" />
+    </configuration>
+    <configuration name="All in DiscGolfCoverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiscGolfCoverage" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.doney.entity in DiscGolfCoverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiscGolfCoverage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.doney.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.doney.entity" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TomEE 8.5.55" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 8.5.55" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -168,6 +199,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Database Script.createDatabase.sql" />
+        <item itemvalue="JUnit.com.doney.entity in DiscGolfCoverage" />
+        <item itemvalue="JUnit.All in DiscGolfCoverage" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +219,8 @@
       <workItem from="1596389970821" duration="353000" />
       <workItem from="1596392458231" duration="1322000" />
       <workItem from="1596400252494" duration="6218000" />
+      <workItem from="1596416826840" duration="380000" />
+      <workItem from="1596417289747" duration="634000" />
     </task>
     <servers />
   </component>
@@ -209,26 +244,30 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="341" y="1328" width="906" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596407432225" />
-    <state x="658" y="1281" width="666" height="711" key="#createDatabase.sql" timestamp="1596406783016">
+    <state x="658" y="1281" width="666" height="711" key="#createDatabase.sql" timestamp="1596417923385">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="658" y="1281" width="666" height="711" key="#createDatabase.sql/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596406783016" />
-    <state width="1240" height="294" key="GridCell.Tab.0.bottom" timestamp="1596409681702">
+    <state x="658" y="1281" width="666" height="711" key="#createDatabase.sql/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417923385" />
+    <state x="779" y="1391" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596417711737">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.0.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596409681702" />
-    <state width="1240" height="294" key="GridCell.Tab.0.center" timestamp="1596409681702">
+    <state x="779" y="1391" width="424" height="491" key="FileChooserDialogImpl/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417711737" />
+    <state width="1240" height="294" key="GridCell.Tab.0.bottom" timestamp="1596417923456">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.0.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596409681702" />
-    <state width="1240" height="294" key="GridCell.Tab.0.left" timestamp="1596409681702">
+    <state width="1240" height="294" key="GridCell.Tab.0.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417923456" />
+    <state width="1240" height="294" key="GridCell.Tab.0.center" timestamp="1596417923456">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.0.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596409681702" />
-    <state width="1240" height="294" key="GridCell.Tab.0.right" timestamp="1596409681702">
+    <state width="1240" height="294" key="GridCell.Tab.0.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417923456" />
+    <state width="1240" height="294" key="GridCell.Tab.0.left" timestamp="1596417923456">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.0.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596409681702" />
+    <state width="1240" height="294" key="GridCell.Tab.0.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417923456" />
+    <state width="1240" height="294" key="GridCell.Tab.0.right" timestamp="1596417923456">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1240" height="294" key="GridCell.Tab.0.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417923456" />
     <state width="1240" height="294" key="GridCell.Tab.1.bottom" timestamp="1596409681702">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -261,13 +300,13 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state width="1240" height="294" key="GridCell.Tab.2.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596409681702" />
-    <state x="485" y="1268" width="1022" height="737" key="SettingsEditor" timestamp="1596400719517">
+    <state x="485" y="1268" width="1022" height="737" key="SettingsEditor" timestamp="1596417446726">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="485" y="1268" width="1022" height="737" key="SettingsEditor/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596400719517" />
-    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1596402059693">
+    <state x="485" y="1268" width="1022" height="737" key="SettingsEditor/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417446726" />
+    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1596417739713">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596402059693" />
+    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417739713" />
   </component>
 </project>

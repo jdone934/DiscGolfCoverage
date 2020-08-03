@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS favorite_players;
 DROP TABLE IF EXISTS tournament_at_course;
 DROP TABLE IF EXISTS rounds_in_tournament;
 DROP TABLE IF EXISTS players_in_round;
+DROP TABLE IF EXISTS commentators;
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS tournament;
@@ -147,5 +148,17 @@ CREATE TABLE players_in_round (
         ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
+        ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE commentators (
+    `playerId` int(10) NOT NULL,
+    `roundId` int(10) NOT NULL,
+    PRIMARY KEY (`playerId`, `roundId`),
+    FOREIGN KEY (`playerId`)
+        REFERENCES `player` (`playerId`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (`roundId`)
+        REFERENCES `round` (`roundId`)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
