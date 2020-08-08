@@ -40,7 +40,7 @@ public class TournamentSearch extends HttpServlet {
         req.setAttribute("searchType", searchType);
         propertyMap.put("name", tournamentName);
 
-        List<Player> results = dao.findByPropertyLikeMap(propertyMap);
+        List<Tournament> results = dao.findByPropertyLikeMap(propertyMap);
 
         req.setAttribute("tournaments", results);
 
