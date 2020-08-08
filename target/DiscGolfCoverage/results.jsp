@@ -18,5 +18,14 @@
             </div>
         </c:forEach>
     </c:if>
+
+    <c:if test="${searchType == 'tournament'}">
+        <c:if test="${not empty tournaments}">
+            <h1>Tournaments Found</h1>
+        </c:if>
+        <c:forEach var="tournament" items="${tournaments}" varStatus="loop">
+            ${tournament.name}: ${tournament.year}<hr>
+        </c:forEach>
+    </c:if>
 </body>
 </html>

@@ -1,4 +1,5 @@
 com/doney/entity/RoundsInTournament.class
+com/doney/controller/TournamentSearch.class
 com/doney/controller/PlayerProfile.class
 com/doney/entity/User.class
 com/doney/entity/Role.class
@@ -6,12 +7,12 @@ com/doney/entity/Round.class
 com/doney/persistence/SessionFactoryProvider.class
 com/doney/entity/FavoriteRounds.class
 com/doney/entity/FavoritePlayers.class
-com/doney/controller/SearchCoverage.class
 com/doney/entity/Tournament.class
 com/doney/entity/FavoriteCourses.class
 com/doney/entity/FavoriteTournaments.class
 com/doney/entity/Course.class
 com/doney/persistence/GenericDao.class
+com/doney/controller/PlayerSearch.class
 com/doney/entity/TournamentAtCourse.class
 com/doney/entity/Player.class
 com/doney/entity/Commentators.class

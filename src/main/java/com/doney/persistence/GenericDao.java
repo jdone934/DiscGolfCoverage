@@ -158,7 +158,11 @@ public class GenericDao<T> {
         Root<T> root = query.from(type);
         List<Predicate> predicates = new ArrayList<Predicate>();
         for (Map.Entry entry: propertyMap.entrySet()) {
-            predicates.add(builder.like((Expression) root.get((String) entry.getKey()), "%" + (String) entry.getValue() + "%"));
+            if (entry.getValue() instanceof Integer) {
+                predicates.add(builder.equal(root.get((String) entry.getKey()), entry.getValue()));
+            } else {
+                predicates.add(builder.like((Expression) root.get((String) entry.getKey()), "%" + (String) entry.getValue() + "%"));
+            }
         }
         query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
 

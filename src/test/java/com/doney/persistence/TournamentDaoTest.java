@@ -83,6 +83,7 @@ public class TournamentDaoTest {
     void getByPropertyLikeMapSuccess() {
         Map<String, Object> propertyMap = new HashMap<>();
         propertyMap.put("name", "Ledge");
+        propertyMap.put("year", 2019);
         List<Tournament> tournaments = tournamentDao.findByPropertyLikeMap(propertyMap);
         assertEquals(1, tournaments.size());
         Tournament tournamentFound = tournaments.get(0);

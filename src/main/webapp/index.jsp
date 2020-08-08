@@ -10,7 +10,7 @@
 
     <h1>Find Coverage</h1>
 
-    <form id="findCoverage" method="post" action="searchCoverage" class="" onsubmit="">
+    <form id="findCoverage" method="post" action="searchByPlayer" class="" onsubmit="">
         <div id="errorMessage"></div>
         <div class="form-group">
             <label for="searchType">Search Type</label>

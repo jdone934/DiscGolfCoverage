@@ -95,3 +95,17 @@
 [INFO ] 2020-08-08 14:04:17.716 [http-nio-8080-exec-4] SearchCoverage - Search for player with first name Ricky and last name 
 [INFO ] 2020-08-08 14:14:49.328 [http-nio-8080-exec-3] SearchCoverage - Result size: 1
 [INFO ] 2020-08-08 14:14:49.332 [http-nio-8080-exec-3] SearchCoverage - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 14:44:19.030 [http-nio-8080-exec-6] PlayerSearch - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 14:44:24.600 [http-nio-8080-exec-7] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 14:44:54.132 [http-nio-8080-exec-3] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 14:44:57.634 [http-nio-8080-exec-4] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 14:45:00.560 [http-nio-8080-exec-5] PlayerSearch - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 15:01:38.556 [http-nio-8080-exec-9] PlayerSearch - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 15:02:40.985 [http-nio-8080-exec-1] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 15:17:52.961 [http-nio-8080-exec-1] PlayerSearch - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 15:17:55.881 [http-nio-8080-exec-2] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 15:18:10.035 [http-nio-8080-exec-7] TournamentSearch - Search for tournaments with name Ledge and in year 2019
+[INFO ] 2020-08-08 15:19:00.736 [http-nio-8080-exec-10] TournamentSearch - Search for tournaments with name Ledge and in year 2019
+[INFO ] 2020-08-08 15:22:44.591 [http-nio-8080-exec-1] TournamentSearch - Search for tournaments with name Ledge and in year 0
+[INFO ] 2020-08-08 15:24:13.964 [http-nio-8080-exec-2] TournamentSearch - Search for tournaments with name Ledge
+[INFO ] 2020-08-08 15:24:54.018 [http-nio-8080-exec-6] TournamentSearch - Search for tournaments with name Ledge and in year 2019

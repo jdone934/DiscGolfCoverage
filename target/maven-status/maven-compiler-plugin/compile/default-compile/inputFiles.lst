@@ -1,5 +1,7 @@
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/Course.java
+/home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/controller/TournamentSearch.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/FavoriteCourses.java
+/home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/controller/PlayerSearch.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/Round.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/Commentators.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/persistence/GenericDao.java
@@ -9,7 +11,6 @@
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/TournamentAtCourse.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/Player.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/FavoriteTournaments.java
-/home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/controller/SearchCoverage.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/FavoritePlayers.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/persistence/SessionFactoryProvider.java
 /home/jdoney/IdeaProjects/DiscGolfCoverage/src/main/java/com/doney/entity/FavoriteRounds.java
