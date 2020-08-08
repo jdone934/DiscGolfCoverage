@@ -109,3 +109,5 @@
 [INFO ] 2020-08-08 15:22:44.591 [http-nio-8080-exec-1] TournamentSearch - Search for tournaments with name Ledge and in year 0
 [INFO ] 2020-08-08 15:24:13.964 [http-nio-8080-exec-2] TournamentSearch - Search for tournaments with name Ledge
 [INFO ] 2020-08-08 15:24:54.018 [http-nio-8080-exec-6] TournamentSearch - Search for tournaments with name Ledge and in year 2019
+[INFO ] 2020-08-08 15:26:54.225 [http-nio-8080-exec-2] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 15:26:59.187 [http-nio-8080-exec-4] TournamentSearch - Search for tournaments with name 

@@ -1,12 +1,16 @@
 package com.doney.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "course")
 public class Course {
     @Id
-    @Column(name = "courseId")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Integer courseId;
 
     @Column(name = "name")
@@ -18,9 +22,42 @@ public class Course {
     @Column(name = "location_state")
     private String locationState;
 
+    @Column(name = "location_country")
+    private String locationCountry;
+
     @Column(name = "website")
     private String website;
 
+    public Course() {
+    }
+
+    public Course(String name) {
+        this.name = name;
+    }
+
+    public Course(String name, String locationCity, String locationState, String locationCountry) {
+        this.name = name;
+        this.locationCity = locationCity;
+        this.locationState = locationState;
+        this.locationCountry = locationCountry;
+    }
+
+    public Course(String name, String locationCity, String locationState, String locationCountry, String website) {
+        this.name = name;
+        this.locationCity = locationCity;
+        this.locationState = locationState;
+        this.locationCountry = locationCountry;
+        this.website = website;
+    }
+
+    public Course(Integer courseId, String name, String locationCity, String locationState, String locationCountry, String website) {
+        this.courseId = courseId;
+        this.name = name;
+        this.locationCity = locationCity;
+        this.locationState = locationState;
+        this.locationCountry = locationCountry;
+        this.website = website;
+    }
 
     public Integer getCourseId() {
         return this.courseId;
@@ -54,11 +91,35 @@ public class Course {
         this.locationState = locationState;
     }
 
+    public String getLocationCountry() {
+        return locationCountry;
+    }
+
+    public void setLocationCountry(String locationCountry) {
+        this.locationCountry = locationCountry;
+    }
+
     public String getWebsite() {
         return this.website;
     }
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return name.equals(course.name) &&
+                Objects.equals(locationCity, course.locationCity) &&
+                Objects.equals(locationState, course.locationState) &&
+                Objects.equals(locationCountry, course.locationCountry);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, locationCity, locationState, locationCountry);
     }
 }

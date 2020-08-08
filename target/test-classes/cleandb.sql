@@ -39,6 +39,7 @@ CREATE TABLE course (
     `name` varchar(100) NOT NULL,
     `location_city` varchar(50),
     `location_state` varchar(2),
+    `location_country` varchar(60),
     `website` varchar(500),
     PRIMARY KEY (`courseId`)
 );
@@ -178,4 +179,8 @@ INSERT INTO
 
 INSERT INTO
     tournament (name, year, tournamentSeries, website)
-    VALUES ('Ledgestone', 2019, '', '');
+    VALUES ('Ledgestone Insurance Open', 2019, '', '');
+
+INSERT INTO
+    course (courseId, name, location_city, location_state, location_country, website)
+    VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', '');
