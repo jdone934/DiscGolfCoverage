@@ -87,3 +87,11 @@
 [INFO ] 2020-08-08 13:17:40.934 [http-nio-8080-exec-7] SearchCoverage - Search for player with first name  and last name 
 [INFO ] 2020-08-08 13:18:16.264 [http-nio-8080-exec-10] SearchCoverage - Result size: 2
 [INFO ] 2020-08-08 13:18:16.268 [http-nio-8080-exec-10] SearchCoverage - Search for player with first name  and last name 
+[INFO ] 2020-08-08 13:22:14.607 [http-nio-8080-exec-6] SearchCoverage - Result size: 2
+[INFO ] 2020-08-08 13:22:14.607 [http-nio-8080-exec-6] SearchCoverage - Search for player with first name  and last name 
+[INFO ] 2020-08-08 13:26:36.886 [http-nio-8080-exec-3] SearchCoverage - Result size: 2
+[INFO ] 2020-08-08 13:26:36.890 [http-nio-8080-exec-3] SearchCoverage - Search for player with first name  and last name 
+[INFO ] 2020-08-08 14:04:17.710 [http-nio-8080-exec-4] SearchCoverage - Result size: 1
+[INFO ] 2020-08-08 14:04:17.716 [http-nio-8080-exec-4] SearchCoverage - Search for player with first name Ricky and last name 
+[INFO ] 2020-08-08 14:14:49.328 [http-nio-8080-exec-3] SearchCoverage - Result size: 1
+[INFO ] 2020-08-08 14:14:49.332 [http-nio-8080-exec-3] SearchCoverage - Search for player with first name Ricky and last name 

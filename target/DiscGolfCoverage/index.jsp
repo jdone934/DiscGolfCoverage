@@ -1,6 +1,8 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
+    <script src="js/formControl.js"></script>
+    <link rel="stylesheet" href="style/searchForm.css" />
 </head>
 <body>
 <div class="container-fluid">
@@ -20,14 +22,24 @@
             </select>
         </div>
 
-        <div class="form-group player">
+        <div class="form-group player searchField">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" name="firstName" id="firstName">
         </div>
 
-        <div class="form-group player">
-            <label class="player" for="lastName">Last Name</label>
-            <input type="text" class="form-control player" name="lastName" id="lastName">
+        <div class="form-group player searchField">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="lastName">
+        </div>
+
+        <div class="form-group tournament searchField">
+            <label class="player" for="tournamentName">Tournament Name</label>
+            <input type="text" class="form-control" name="tournamentName" id="tournamentName">
+        </div>
+
+        <div class="form-group tournament searchField">
+            <label class="player" for="tournamentYear">Tournament Year</label>
+            <input type="number" class="form-control" name="tournamentYear" id="tournamentYear">
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Search</button>
