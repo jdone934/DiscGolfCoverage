@@ -18,6 +18,7 @@
 
         <mapping class="com.doney.entity.Round" />
         <mapping class="com.doney.entity.Player" />
+        <mapping class="com.doney.entity.Tournament" />
     </session-factory>
 
 </hibernate-configuration>

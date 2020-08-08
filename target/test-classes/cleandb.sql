@@ -175,3 +175,7 @@ INSERT INTO
 INSERT INTO
     player (playerId, first_name, last_name, profile_picture)
     VALUES (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg');
+
+INSERT INTO
+    tournament (name, year, tournamentSeries, website)
+    VALUES ('Ledgestone', 2019, '', '');
