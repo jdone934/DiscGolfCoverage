@@ -17,3 +17,4 @@ com/doney/entity/TournamentAtCourse.class
 com/doney/entity/Player.class
 com/doney/entity/Commentators.class
 com/doney/entity/PlayersInRound.class
+com/doney/controller/CourseSearch.class

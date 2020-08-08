@@ -111,3 +111,23 @@
 [INFO ] 2020-08-08 15:24:54.018 [http-nio-8080-exec-6] TournamentSearch - Search for tournaments with name Ledge and in year 2019
 [INFO ] 2020-08-08 15:26:54.225 [http-nio-8080-exec-2] PlayerSearch - Search for player with first name  and last name 
 [INFO ] 2020-08-08 15:26:59.187 [http-nio-8080-exec-4] TournamentSearch - Search for tournaments with name 
+[INFO ] 2020-08-08 16:43:26.915 [http-nio-8080-exec-4] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 16:43:30.779 [http-nio-8080-exec-6] TournamentSearch - Search for tournaments with name 
+[INFO ] 2020-08-08 17:09:14.799 [http-nio-8080-exec-4] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:09:18.572 [http-nio-8080-exec-6] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:10:10.337 [http-nio-8080-exec-1] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:11:22.765 [http-nio-8080-exec-10] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:11:35.486 [http-nio-8080-exec-1] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:11:55.049 [http-nio-8080-exec-4] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:13:58.380 [http-nio-8080-exec-1] CourseSearch - Name: null City: null State: null Country: null
+[INFO ] 2020-08-08 17:13:59.781 [http-nio-8080-exec-1] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:15:53.727 [http-nio-8080-exec-2] CourseSearch - Name:  City:  State: AL Country: 
+[INFO ] 2020-08-08 17:15:55.159 [http-nio-8080-exec-2] CourseSearch - Search for Courses with name of  city of  state of AL country of 
+[INFO ] 2020-08-08 17:16:21.342 [http-nio-8080-exec-6] CourseSearch - Name:  City:  State: IL Country: 
+[INFO ] 2020-08-08 17:16:21.355 [http-nio-8080-exec-6] CourseSearch - Search for Courses with name of  city of  state of IL country of 
+[INFO ] 2020-08-08 17:19:35.663 [http-nio-8080-exec-10] CourseSearch - Name:  City:  State: IL Country: 
+[INFO ] 2020-08-08 17:19:37.064 [http-nio-8080-exec-10] CourseSearch - Search for Courses with state of IL
+[INFO ] 2020-08-08 17:20:47.599 [http-nio-8080-exec-6] CourseSearch - Name:  City:  State: IL Country: 
+[INFO ] 2020-08-08 17:20:47.602 [http-nio-8080-exec-6] CourseSearch - Search for Courses with state of IL
+[INFO ] 2020-08-08 17:21:14.210 [http-nio-8080-exec-1] CourseSearch - Name:  City:  State:  Country: 
+[INFO ] 2020-08-08 17:21:15.648 [http-nio-8080-exec-1] CourseSearch - Search for Courses with

@@ -27,5 +27,14 @@
             ${tournament.name}: ${tournament.year}<hr>
         </c:forEach>
     </c:if>
+
+    <c:if test="${searchType == 'course'}">
+        <c:if test="${not empty courses}">
+            <h1>Courses Found</h1>
+        </c:if>
+        <c:forEach var="course" items="${courses}" varStatus="loop">
+            ${course.name}: ${course.locationCity}, ${course.locationState}<hr>
+        </c:forEach>
+    </c:if>
 </body>
 </html>
