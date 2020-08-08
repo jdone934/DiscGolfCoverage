@@ -68,7 +68,7 @@ public class PlayerDaoTest {
     @Test
     void getAllSuccess() {
         List<Player> players = playerDao.getAll();
-        assertEquals(2, players.size());
+        assertEquals(6, players.size());
     }
 
     @Test

@@ -171,16 +171,41 @@ INSERT INTO
 
 INSERT INTO
     player (playerId, first_name, last_name, profile_picture)
-    VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg');
+    VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg'),
+           (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg'),
+           (3, 'Reid', 'Frescura', 'ReidFrescura.jpg'),
+           (4, 'Kevin', 'Jones', 'KevinJones.jpg'),
+           (5, 'Jeremy', 'Koling', 'JeremyKoling.jpg'),
+           (6, 'Nate', 'Perkins', 'NatePerkins.jpg');
 
 INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg');
-
-INSERT INTO
-    tournament (name, year, tournamentSeries, website)
-    VALUES ('Ledgestone Insurance Open', 2019, '', '');
+    tournament (tournamentId, name, year, tournamentSeries, website)
+    VALUES (1, 'Ledgestone Insurance Open', 2019, '', '');
 
 INSERT INTO
     course (courseId, name, location_city, location_state, location_country, website)
     VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', '');
+
+INSERT INTO
+    round (roundId, round_number, coverage_link, coverage_provider)
+    VALUES (2, 3, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro');
+
+INSERT INTO
+    tournament_at_course (courseId, tournamentId)
+    VALUES (1, 1);
+
+INSERT INTO
+    rounds_in_tournament (roundId, tournamentId)
+    VALUES (2, 1);
+
+INSERT INTO
+    players_in_round (roundId, playerId)
+    VALUES (2, 1),
+           (2, 2),
+           (2, 3),
+           (2, 4);
+
+INSERT INTO
+    commentators (playerId, roundId)
+    VALUES (5, 2),
+           (6, 2);

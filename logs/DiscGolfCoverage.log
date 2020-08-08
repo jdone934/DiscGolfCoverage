@@ -131,3 +131,17 @@
 [INFO ] 2020-08-08 17:20:47.602 [http-nio-8080-exec-6] CourseSearch - Search for Courses with state of IL
 [INFO ] 2020-08-08 17:21:14.210 [http-nio-8080-exec-1] CourseSearch - Name:  City:  State:  Country: 
 [INFO ] 2020-08-08 17:21:15.648 [http-nio-8080-exec-1] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:30:19.207 [http-nio-8080-exec-1] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:30:23.988 [http-nio-8080-exec-2] TournamentSearch - Search for tournaments with name 
+[INFO ] 2020-08-08 17:30:28.228 [http-nio-8080-exec-3] CourseSearch - Name:  City:  State:  Country: 
+[INFO ] 2020-08-08 17:30:28.236 [http-nio-8080-exec-3] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:40:57.657 [http-nio-8080-exec-7] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:41:00.786 [http-nio-8080-exec-9] PlayerSearch - Search for player with first name paul and last name 
+[INFO ] 2020-08-08 17:41:05.113 [http-nio-8080-exec-10] PlayerSearch - Search for player with first name r and last name 
+[INFO ] 2020-08-08 17:41:16.183 [http-nio-8080-exec-1] TournamentSearch - Search for tournaments with name Ledge
+[INFO ] 2020-08-08 17:41:21.460 [http-nio-8080-exec-3] CourseSearch - Name: L City:  State:  Country: 
+[INFO ] 2020-08-08 17:41:21.463 [http-nio-8080-exec-3] CourseSearch - Search for Courses with name of L
+[INFO ] 2020-08-08 17:41:29.086 [http-nio-8080-exec-4] CourseSearch - Name:  City:  State:  Country: 
+[INFO ] 2020-08-08 17:41:29.089 [http-nio-8080-exec-4] CourseSearch - Search for Courses with
+[INFO ] 2020-08-08 17:48:57.699 [http-nio-8080-exec-1] PlayerSearch - Search for player with first name  and last name 
+[INFO ] 2020-08-08 17:59:38.381 [http-nio-8080-exec-5] PlayerSearch - Search for player with first name  and last name 

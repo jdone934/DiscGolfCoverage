@@ -18,7 +18,6 @@
                 <option value="player">Player</option>
                 <option value="tournament">Tournament</option>
                 <option value="course">Course</option>
-                <option value="year">Year</option>
             </select>
         </div>
 

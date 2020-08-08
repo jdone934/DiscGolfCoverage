@@ -178,6 +178,22 @@ INSERT INTO
     VALUES (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg');
 
 INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (3, 'Reid', 'Frescura', 'ReidFrescura.jpg');
+
+INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (4, 'Kevin', 'Jones', 'KevinJones.jpg');
+
+INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (5, 'Jeremy', 'Koling', 'JeremyKoling.jpg');
+
+INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (6, 'Nate', 'Perkins', 'NatePerkins.jpg');
+
+INSERT INTO
     tournament (name, year, tournamentSeries, website)
     VALUES ('Ledgestone Insurance Open', 2019, '', '');
 
