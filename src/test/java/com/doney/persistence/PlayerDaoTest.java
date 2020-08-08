@@ -39,7 +39,7 @@ public class PlayerDaoTest {
 
     @Test
     void insertSuccess() {
-        Player newPlayer = new Player(2, "Paul", "McBeth");
+        Player newPlayer = new Player( "James", "Conrad", "JamesConrad.jpg");
         int id = playerDao.insert(newPlayer);
         assertNotEquals(0, id);
         newPlayer.setPlayerId(id);
@@ -49,10 +49,11 @@ public class PlayerDaoTest {
 
     @Test
     void updateSuccess() {
-        Player expectedPlayer = new Player(1, "Paul", "McBeth");
+        Player expectedPlayer = new Player("Paul", "McBeth", "PaulMcBeth.jpg");
         Player playerToUpdate = (Player) playerDao.getById(1);
         playerToUpdate.setFirstName("Paul");
         playerToUpdate.setLastName("McBeth");
+        playerToUpdate.setProfilePicture("PaulMcBeth.jpg");
         playerDao.saveOrUpdate(playerToUpdate);
         Player playerAfterUpdate = (Player) playerDao.getById(1);
         assertEquals(expectedPlayer, playerAfterUpdate);
@@ -67,15 +68,26 @@ public class PlayerDaoTest {
     @Test
     void getAllSuccess() {
         List<Player> players = playerDao.getAll();
-        assertEquals(1, players.size());
+        assertEquals(2, players.size());
     }
 
     @Test
     void getByPropertyLikeSuccess() {
-        List<Player> players = playerDao.getByPropertyLike("firstName", "Ricky");
+        List<Player> players = playerDao.getByPropertyLike("firstName", "Rick");
         assertEquals(1, players.size());
         Player playerFound = players.get(0);
-        Player expectedPlayer = new Player(1, "Ricky", "Wysocki");
+        Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
+        assertEquals(expectedPlayer, playerFound);
+    }
+
+    @Test
+    void getByPropertyLikeMapSuccess() {
+        Map<String, Object> propertyMap = new HashMap<>();
+        propertyMap.put("firstName", "Ric");
+        List<Player> players = playerDao.findByPropertyLikeMap(propertyMap);
+        assertEquals(1, players.size());
+        Player playerFound = players.get(0);
+        Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
         assertEquals(expectedPlayer, playerFound);
     }
 
@@ -83,10 +95,11 @@ public class PlayerDaoTest {
     void findByPropertyLikeMapSuccess() {
         Map<String, Object> propertyMap = new HashMap<>();
         propertyMap.put("firstName", "Ricky");
+        propertyMap.put("lastName", "Wysocki");
         List<Player> players = playerDao.findByPropertyEqual(propertyMap);
         assertEquals(1, players.size());
         Player playerFound = players.get(0);
-        Player expectedPlayer = new Player(1, "Ricky", "Wysocki");
+        Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
         assertEquals(expectedPlayer, playerFound);
     }
 }

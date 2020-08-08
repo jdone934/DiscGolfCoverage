@@ -171,3 +171,7 @@ INSERT INTO
 INSERT INTO
     player (playerId, first_name, last_name, profile_picture)
     VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg');
+
+INSERT INTO
+    player (playerId, first_name, last_name, profile_picture)
+    VALUES (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg');

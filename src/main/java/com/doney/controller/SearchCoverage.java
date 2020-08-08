@@ -38,7 +38,7 @@ public class SearchCoverage extends HttpServlet {
                 req.setAttribute("searchType", searchType);
                 propertyMap.put("firstName", firstName);
                 propertyMap.put("lastName", lastName);
-                List<Player> results = dao.findByPropertyEqual(propertyMap);
+                List<Player> results = dao.findByPropertyLikeMap(propertyMap);
                 logger.info("Result size: " + results.size());
 
                 req.setAttribute("players", results);
