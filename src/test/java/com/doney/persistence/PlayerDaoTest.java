@@ -3,6 +3,7 @@ package com.doney.persistence;
 import com.doney.entity.Player;
 import com.doney.entity.PlayersInRound;
 import com.doney.entity.Round;
+import com.doney.entity.Tournament;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
@@ -17,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerDaoTest {
     GenericDao playerDao;
+    GenericDao tournamentDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -27,6 +29,7 @@ public class PlayerDaoTest {
         database.runSQL("cleandb.sql");
 
         playerDao = new GenericDao(Player.class);
+        tournamentDao = new GenericDao(Tournament.class);
     }
 
     @Test
@@ -105,7 +108,7 @@ public class PlayerDaoTest {
 
     @Test
     void findRoundsPlayerInSuccess() {
-        Round expectedRound = new Round(1, 2, "testLink", "JomezPro");
+        Round expectedRound = new Round( 2, "front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
         Player retrievedPlayer = (Player) playerDao.getById(1);
         Set<PlayersInRound> roundsPlayedIn = retrievedPlayer.getRoundsPlayedIn();
 

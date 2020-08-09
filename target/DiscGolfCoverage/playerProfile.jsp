@@ -11,7 +11,7 @@
     <c:forEach var="roundPlayedIn" items="${player.roundsPlayedIn}" varStatus="loop">
         <c:set var="round" value="${roundPlayedIn.round}" />
         <c:set var="tournament" value="${round.tournament}" />
-        <a href="${round.coverageLink}">${tournament.name} (${tournament.year}): Round ${round.roundNumber}</a>
+        <a href="${round.coverageLink}">${tournament.name} (${tournament.year}): Round ${round.roundNumber} ${round.frontVsBack} ${round.numberOfHoles}</a> </br>
     </c:forEach>
 </body>
 </html>

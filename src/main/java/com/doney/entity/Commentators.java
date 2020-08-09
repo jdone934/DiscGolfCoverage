@@ -5,28 +5,30 @@ import javax.persistence.*;
 @Entity
 @Table(name = "commentators")
 public class Commentators {
-    @Id
-    @Column(name = "playerId")
-    private Integer playerId;
+    @ManyToOne
+    @JoinColumn(name = "roundId")
+    private Round round;
 
-    @Id
-    @Column(name = "roundId")
-    private Integer roundId;
+    @ManyToOne
+    @JoinColumn(name = "playerId")
+    private Player player;
 
-
-    public Integer getPlayerId() {
-        return this.playerId;
+    public Commentators() {
     }
 
-    public void setPlayerId(Integer playerId) {
-        this.playerId = playerId;
+    public Round getRound() {
+        return round;
     }
 
-    public Integer getRoundId() {
-        return this.roundId;
+    public void setRound(Round round) {
+        this.round = round;
     }
 
-    public void setRoundId(Integer roundId) {
-        this.roundId = roundId;
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 }

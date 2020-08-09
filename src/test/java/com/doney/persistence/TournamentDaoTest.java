@@ -111,7 +111,8 @@ public class TournamentDaoTest {
 
         assertEquals(2, retrievedRounds.size());
 
-        Round expectedRound = new Round(2, "testLink", "JomezPro");
+        Round expectedRound = new Round(2, "front", 9,"testLink",
+                        "JomezPro", null, (Tournament) tournamentDao.getById(1));
         Iterator roundsList = retrievedRounds.iterator();
         Round retrievedRound = null;
         Round currentRound;

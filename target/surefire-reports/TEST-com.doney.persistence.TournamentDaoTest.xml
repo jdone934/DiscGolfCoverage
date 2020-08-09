@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.doney.persistence.TournamentDaoTest" time="4.114" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.doney.persistence.TournamentDaoTest" time="4.289" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.8+10-LTS"/>
@@ -62,13 +62,14 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="deleteSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.391"/>
-  <testcase name="getAllSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.321"/>
-  <testcase name="getByPropertyLikeMapSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.271"/>
-  <testcase name="getByPropertyLikeSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.275"/>
-  <testcase name="findRoundsAtTournamentSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.261"/>
-  <testcase name="findByPropertyLikeMapSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.267"/>
-  <testcase name="getByIdSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.265"/>
-  <testcase name="updateSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.287"/>
-  <testcase name="insertSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.257"/>
+  <testcase name="deleteSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.357"/>
+  <testcase name="tournamentDeleteCascadeSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.277"/>
+  <testcase name="getAllSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.317"/>
+  <testcase name="getByPropertyLikeMapSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.284"/>
+  <testcase name="getByPropertyLikeSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.26"/>
+  <testcase name="findRoundsAtTournamentSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.263"/>
+  <testcase name="findByPropertyLikeMapSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.253"/>
+  <testcase name="getByIdSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.257"/>
+  <testcase name="updateSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.261"/>
+  <testcase name="insertSuccess" classname="com.doney.persistence.TournamentDaoTest" time="0.238"/>
 </testsuite>

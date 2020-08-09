@@ -35,14 +35,14 @@ public class RoundDaoTest {
     @Test
     void getByIdSuccess() {
         Round retrievedRound = (Round) roundDao.getById(1);
-        Round expectedRound = new Round(1, 2, "testLink", "JomezPro");
+        Round expectedRound = new Round( 2, "front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
 
         assertEquals(expectedRound, retrievedRound);
     }
 
     @Test
     void insertSuccess() {
-        Round newRound = new Round(3, "testLinkBack9", "JomezPro", null,(Tournament) tournamentDao.getById(1));
+        Round newRound = new Round(3, "front", 9,"testLinkBack9", "JomezPro", null,(Tournament) tournamentDao.getById(1));
         int id = roundDao.insert(newRound);
         assertNotEquals(0, id);
         newRound.setRoundId(id);
@@ -52,7 +52,7 @@ public class RoundDaoTest {
 
     @Test
     void updateSuccess() {
-        Round expectedRound = new Round(2, "newTestLink", "JomezPro");
+        Round expectedRound = new Round(2, "front", 9,"newTestLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
         Round roundToUpdate = (Round) roundDao.getById(1);
         roundToUpdate.setCoverageLink("newTestLink");
         roundDao.saveOrUpdate(roundToUpdate);

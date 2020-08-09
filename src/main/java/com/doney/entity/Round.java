@@ -22,6 +22,14 @@ public class Round {
     private Integer roundNumber;
 
     @NotNull
+    @Column(name = "front_vs_back")
+    private String frontVsBack;
+
+    @NotNull
+    @Column(name = "number_of_holes")
+    private int numberOfHoles;
+
+    @NotNull
     @Column(name = "coverage_link")
     private String coverageLink;
 
@@ -65,6 +73,16 @@ public class Round {
     public Round(Integer roundId, Integer roundNumber, String coverageLink, String coverageProvider, Set<PlayersInRound> playersInRound, Tournament tournament) {
         this.roundId = roundId;
         this.roundNumber = roundNumber;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+        this.playersInRound = playersInRound;
+        this.tournament = tournament;
+    }
+
+    public Round(Integer roundNumber, String frontVsBack, int numberOfHoles, String coverageLink, String coverageProvider, Set<PlayersInRound> playersInRound, Tournament tournament) {
+        this.roundNumber = roundNumber;
+        this.frontVsBack = frontVsBack;
+        this.numberOfHoles = numberOfHoles;
         this.coverageLink = coverageLink;
         this.coverageProvider = coverageProvider;
         this.playersInRound = playersInRound;
@@ -119,18 +137,36 @@ public class Round {
         this.tournament = tournament;
     }
 
+    public String getFrontVsBack() {
+        return frontVsBack;
+    }
+
+    public void setFrontVsBack(String frontVsBack) {
+        this.frontVsBack = frontVsBack;
+    }
+
+    public int getNumberOfHoles() {
+        return numberOfHoles;
+    }
+
+    public void setNumberOfHoles(int numberOfHoles) {
+        this.numberOfHoles = numberOfHoles;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Round round = (Round) o;
-        return roundNumber.equals(round.roundNumber) &&
-                coverageLink.equals(round.coverageLink) &&
-                coverageProvider.equals(round.coverageProvider);
+        return numberOfHoles == round.numberOfHoles &&
+                Objects.equals(roundNumber, round.roundNumber) &&
+                Objects.equals(frontVsBack, round.frontVsBack) &&
+                Objects.equals(coverageLink, round.coverageLink) &&
+                Objects.equals(coverageProvider, round.coverageProvider);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(roundId, roundNumber, coverageLink, coverageProvider);
+        return Objects.hash(roundNumber, frontVsBack, numberOfHoles, coverageLink, coverageProvider);
     }
 }

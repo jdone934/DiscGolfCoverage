@@ -58,6 +58,8 @@ CREATE TABLE round (
     `coverage_link` varchar(500) NOT NULL,
     `coverage_provider` varchar(100) NOT NULL,
     `tournamentId` int(10) NOT NULL,
+    `front_vs_back` varchar(5) NOT NULL,
+    `number_of_holes` int(2) NOT NULL,
     PRIMARY KEY (`roundId`),
     FOREIGN KEY (`tournamentId`)
         REFERENCES `tournament` (`tournamentId`)
@@ -137,19 +139,6 @@ CREATE TABLE tournament_at_course (
         ON UPDATE CASCADE ON DELETE CASCADE
 );
 
--- CREATE TABLE rounds_in_tournament (
---     `rounds_in_tournament_id` int(10) NOT NULL AUTO_INCREMENT,
---     `roundId` int(10) NOT NULL,
---     `tournamentId` int(10) NOT NULL,
---     PRIMARY KEY (`rounds_in_tournament_id`),
---     FOREIGN KEY (`roundId`)
---         REFERENCES `round` (`roundId`)
---         ON UPDATE CASCADE ON DELETE CASCADE,
---     FOREIGN KEY (`tournamentId`)
---         REFERENCES `tournament` (`tournamentId`)
---         ON UPDATE CASCADE ON DELETE CASCADE
--- );
-
 CREATE TABLE players_in_round (
     `players_in_round_id` int(10) NOT NULL AUTO_INCREMENT,
     `roundId` int(10) NOT NULL,
@@ -194,9 +183,9 @@ INSERT INTO
     VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', '');
 
 INSERT INTO
-    round (roundId, round_number, tournamentId, coverage_link, coverage_provider)
-    VALUES (1, 2, 1, 'testLink', 'JomezPro'),
-           (2, 3, 1, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro');
+    round (roundId, round_number, tournamentId, front_vs_back, number_of_holes, coverage_link, coverage_provider)
+    VALUES (1, 2, 1, 'front', 9, 'testLink', 'JomezPro'),
+           (2, 3, 1, 'front', 9, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro');
 
 INSERT INTO
     tournament_at_course (courseId, tournamentId)
