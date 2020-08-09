@@ -25,20 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74f9535-17e8-4bd8-ae18-d9f10cec4ca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 12:33.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 12:35.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverage.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DiscGolfCoverage.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 01:09.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 01:10.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/Commentators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Commentators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/playerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/playerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/PlayerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/PlayerDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/RoundDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/RoundDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/TournamentDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/TournamentDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cleandb.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverage.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/CourseSearch.class" beforeDir="false" />
@@ -119,33 +108,8 @@
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/style/searchForm.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/template/head.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/template/navbar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/CourseSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/PlayerProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/PlayerSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/TournamentSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Commentators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteCourses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoritePlayers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteRounds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteTournaments.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/PlayersInRound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Round.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Tournament.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/TournamentAtCourse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/persistence/GenericDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/persistence/SessionFactoryProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/createDatabase.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Commentators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/doney/entity/Commentators.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.doney.persistence.CourseDaoTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.doney.persistence.PlayerDaoTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.doney.persistence.RoundDaoTest.xml" beforeDir="false" />
@@ -154,14 +118,6 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.doney.persistence.PlayerDaoTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.doney.persistence.RoundDaoTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.doney.persistence.TournamentDaoTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cleandb.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/CourseDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/PlayerDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/RoundDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/TournamentDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/testUtils/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/database.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,7 +360,7 @@
       <workItem from="1596946866140" duration="2311000" />
       <workItem from="1596949544627" duration="4739000" />
       <workItem from="1596992715001" duration="3479000" />
-      <workItem from="1596996321086" duration="348000" />
+      <workItem from="1596996321086" duration="686000" />
     </task>
     <servers />
   </component>
