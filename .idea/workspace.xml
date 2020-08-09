@@ -25,36 +25,142 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74f9535-17e8-4bd8-ae18-d9f10cec4ca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:46.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:48.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:50.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 01:09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 01:10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200809 01:23.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200802 22:46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverage.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DiscGolfCoverage.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:48.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DiscGolfCoverageHibernate_20200808 23:50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/PlayersInRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/PlayersInRound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/CourseDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/CourseDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/PlayerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/PlayerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/RoundsInTournament.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/doney/entity/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/doney/entity/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/playerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/playerProfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/RoundDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/RoundDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/doney/persistence/TournamentDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/doney/persistence/TournamentDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cleandb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/TournamentSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/TournamentSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/PlayersInRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/PlayersInRound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/TournamentSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/doney/controller/TournamentSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/doney/entity/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/PlayersInRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/doney/entity/PlayersInRound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/doney/entity/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cleandb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/CourseDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/CourseDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/PlayerDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/PlayerDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/CourseSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/PlayerProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/PlayerSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/controller/TournamentSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Commentators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/FavoriteCourses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/FavoritePlayers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/FavoriteRounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/FavoriteTournaments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/PlayersInRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Round.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/RoundsInTournament.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/Tournament.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/TournamentAtCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/persistence/GenericDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/com/doney/persistence/SessionFactoryProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/createDatabase.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/classes/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/byte-buddy-1.9.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/c3p0-0.9.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/hibernate-c3p0-5.4.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/hibernate-core-5.4.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jackson-annotations-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jackson-core-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jackson-databind-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jackson-dataformat-xml-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jackson-module-jaxb-annotations-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jakarta.activation-api-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jakarta.xml.bind-api-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/javaee-web-api-7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/javax.mail-1.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/log4j-api-2.13.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/log4j-core-2.13.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/mchange-commons-java-0.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/mysql-connector-java-8.0.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/servlet-api-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/stax2-api-4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/lib/woodstox-core-6.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/js/formControl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/JeremyKoling.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/KevinJones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/NatePerkins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/PaulMcBeth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/ReidFrescura.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/playerProfilePictures/RickyWysocki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/results.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/style/master.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/style/searchForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/template/head.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DiscGolfCoverage/template/navbar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/CourseSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/PlayerProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/PlayerSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/controller/TournamentSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Commentators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteCourses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoritePlayers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteRounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/FavoriteTournaments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/PlayersInRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Round.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/RoundsInTournament.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/Tournament.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/TournamentAtCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/persistence/GenericDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/doney/persistence/SessionFactoryProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/createDatabase.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cleandb.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/CourseDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/PlayerDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/RoundDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/persistence/TournamentDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/doney/testUtils/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,21 +227,12 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/doney/persistence" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoundDaoTest.findPlayesInRoundSuccess">
-    <configuration name="CourseDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DiscGolfCoverage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.doney.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.doney.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.doney.persistence.CourseDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="TomEE Server.TomEE 8.5.55">
+    <configuration name="cleandb.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/test/resources/cleandb.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="c6e7184d-9b42-46b8-b4eb-b4dd55463bff" namespace="schema/&quot;disc_golf_coverage&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="PlayerDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DiscGolfCoverage" />
@@ -152,39 +249,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerDaoTest.findRoundsPlayerInSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DiscGolfCoverage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.doney.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.doney.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.doney.persistence.PlayerDaoTest" />
-      <option name="METHOD_NAME" value="findRoundsPlayerInSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerDaoTest.getByIdSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DiscGolfCoverage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.doney.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.doney.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.doney.persistence.PlayerDaoTest" />
-      <option name="METHOD_NAME" value="getByIdSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoundDaoTest.findPlayesInRoundSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoundDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DiscGolfCoverage" />
       <extension name="coverage">
         <pattern>
@@ -194,7 +259,38 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.doney.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.doney.persistence.RoundDaoTest" />
-      <option name="METHOD_NAME" value="findPlayesInRoundSuccess" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoundDaoTest.getAllSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiscGolfCoverage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.doney.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.doney.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.doney.persistence.RoundDaoTest" />
+      <option name="METHOD_NAME" value="getAllSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoundDaoTest.insertSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiscGolfCoverage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.doney.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.doney.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.doney.persistence.RoundDaoTest" />
+      <option name="METHOD_NAME" value="insertSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -275,11 +371,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RoundDaoTest.findPlayesInRoundSuccess" />
+        <item itemvalue="Database Script.cleandb.sql" />
+        <item itemvalue="JUnit.RoundDaoTest" />
+        <item itemvalue="JUnit.RoundDaoTest.insertSuccess" />
+        <item itemvalue="JUnit.RoundDaoTest.getAllSuccess" />
         <item itemvalue="JUnit.PlayerDaoTest" />
-        <item itemvalue="JUnit.PlayerDaoTest.findRoundsPlayerInSuccess" />
-        <item itemvalue="JUnit.PlayerDaoTest.getByIdSuccess" />
-        <item itemvalue="JUnit.CourseDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,6 +402,8 @@
       <workItem from="1596922939890" duration="407000" />
       <workItem from="1596924193856" duration="4516000" />
       <workItem from="1596946866140" duration="2311000" />
+      <workItem from="1596949544627" duration="4739000" />
+      <workItem from="1596992715001" duration="310000" />
     </task>
     <servers />
   </component>
@@ -328,10 +426,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="658" y="1281" width="666" height="711" key="#cleandb.sql" timestamp="1596928361645">
+    <state x="658" y="1281" width="666" height="711" key="#cleandb.sql" timestamp="1596954284388">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="658" y="1281" width="666" height="711" key="#cleandb.sql/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596928361645" />
+    <state x="658" y="1281" width="666" height="711" key="#cleandb.sql/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284388" />
     <state x="341" y="1328" width="906" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596427783375">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -340,10 +438,14 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="172" y="1207" width="1648" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596423454295" />
-    <state x="804" y="1352" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1596948382719">
+    <state x="804" y="1352" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1596953487896">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="804" y="1352" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948382719" />
+    <state x="804" y="1352" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596953487896" />
+    <state x="729" y="1382" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596950392030">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="729" y="1382" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596950392030" />
     <state x="729" y="1382" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1596914682658">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -356,54 +458,66 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="779" y="1391" width="424" height="491" key="FileChooserDialogImpl/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596417932830" />
-    <state width="1802" height="337" key="GridCell.Tab.0.bottom" timestamp="1596948844949">
+    <state width="1798" height="337" key="GridCell.Tab.0.bottom" timestamp="1596992998105">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1802" height="337" key="GridCell.Tab.0.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948844949" />
-    <state width="1802" height="337" key="GridCell.Tab.0.center" timestamp="1596948844949">
+    <state width="1240" height="294" key="GridCell.Tab.0.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1798" height="337" key="GridCell.Tab.0.bottom/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992998105" />
+    <state width="1798" height="337" key="GridCell.Tab.0.center" timestamp="1596992998105">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1802" height="337" key="GridCell.Tab.0.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948844949" />
-    <state width="1802" height="337" key="GridCell.Tab.0.left" timestamp="1596948844949">
+    <state width="1240" height="294" key="GridCell.Tab.0.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1798" height="337" key="GridCell.Tab.0.center/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992998105" />
+    <state width="1798" height="337" key="GridCell.Tab.0.left" timestamp="1596992998105">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1802" height="337" key="GridCell.Tab.0.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948844949" />
-    <state width="1802" height="337" key="GridCell.Tab.0.right" timestamp="1596948844949">
+    <state width="1240" height="294" key="GridCell.Tab.0.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1798" height="337" key="GridCell.Tab.0.left/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992998105" />
+    <state width="1798" height="337" key="GridCell.Tab.0.right" timestamp="1596992998105">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1802" height="337" key="GridCell.Tab.0.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948844949" />
-    <state width="1240" height="294" key="GridCell.Tab.1.bottom" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.0.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1798" height="337" key="GridCell.Tab.0.right/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992998105" />
+    <state width="1238" height="294" key="GridCell.Tab.1.bottom" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.1.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.1.center" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.1.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.1.bottom/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.1.center" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.1.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.1.left" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.1.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.1.center/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.1.left" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.1.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.1.right" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.1.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.1.left/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.1.right" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.1.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.2.bottom" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.1.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.1.right/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.2.bottom" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.2.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.2.center" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.2.bottom/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284417" />
+    <state width="1238" height="294" key="GridCell.Tab.2.bottom/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.2.center" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.2.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.2.left" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.2.center/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.2.center/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.2.left" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.2.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
-    <state width="1240" height="294" key="GridCell.Tab.2.right" timestamp="1596948416381">
+    <state width="1240" height="294" key="GridCell.Tab.2.left/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284416" />
+    <state width="1238" height="294" key="GridCell.Tab.2.left/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
+    <state width="1238" height="294" key="GridCell.Tab.2.right" timestamp="1596992996944">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1240" height="294" key="GridCell.Tab.2.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948416381" />
+    <state width="1240" height="294" key="GridCell.Tab.2.right/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954284417" />
+    <state width="1238" height="294" key="GridCell.Tab.2.right/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992996944" />
     <state x="485" y="1268" width="1022" height="737" key="SettingsEditor" timestamp="1596915950947">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -412,13 +526,25 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="725" y="1364" width="540" height="524" key="StructurePopup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596418971504" />
+    <state x="769" y="1548" width="448" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596993024712">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="769" y="1548" width="448" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596993024712" />
     <state x="687" y="1242" width="618" height="783" key="find.popup" timestamp="1596419472096">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="687" y="1242" width="618" height="783" key="find.popup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596419472096" />
-    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1596948883070">
+    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1596992855770">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596948883070" />
+    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/72.0.1848.1080@0.1080.1920.1080" timestamp="1596954266311" />
+    <state x="659" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/76.0.1844.1080@0.1080.1920.1080" timestamp="1596992855770" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="com.doney.entity.Round" fieldName="playersInRound" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

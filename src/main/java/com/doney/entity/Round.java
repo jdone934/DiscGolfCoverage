@@ -1,5 +1,6 @@
 package com.doney.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -29,7 +30,13 @@ public class Round {
     private String coverageProvider;
 
     @OneToMany(mappedBy = "round", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<PlayersInRound> playersInRound = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "tournamentId")
+    @JsonIgnore
+    private Tournament tournament;
 
     public Round() {
     }
@@ -45,6 +52,23 @@ public class Round {
         this.roundNumber = roundNumber;
         this.coverageLink = coverageLink;
         this.coverageProvider = coverageProvider;
+    }
+
+    public Round(Integer roundNumber, String coverageLink, String coverageProvider, Set<PlayersInRound> playersInRound, Tournament tournament) {
+        this.roundNumber = roundNumber;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+        this.playersInRound = playersInRound;
+        this.tournament = tournament;
+    }
+
+    public Round(Integer roundId, Integer roundNumber, String coverageLink, String coverageProvider, Set<PlayersInRound> playersInRound, Tournament tournament) {
+        this.roundId = roundId;
+        this.roundNumber = roundNumber;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+        this.playersInRound = playersInRound;
+        this.tournament = tournament;
     }
 
     public Integer getRoundId() {
@@ -85,6 +109,14 @@ public class Round {
 
     public void setPlayersInRound(Set<PlayersInRound> playersInRound) {
         this.playersInRound = playersInRound;
+    }
+
+    public Tournament getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(Tournament tournament) {
+        this.tournament = tournament;
     }
 
     @Override

@@ -1,8 +1,6 @@
 package com.doney.persistence;
 
-import com.doney.entity.Player;
-import com.doney.entity.PlayersInRound;
-import com.doney.entity.Round;
+import com.doney.entity.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
@@ -18,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RoundDaoTest {
     GenericDao roundDao;
+    GenericDao tournamentDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -28,6 +27,7 @@ public class RoundDaoTest {
         database.runSQL("cleandb.sql");
 
         roundDao = new GenericDao(Round.class);
+        tournamentDao = new GenericDao(Tournament.class);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class RoundDaoTest {
 
     @Test
     void insertSuccess() {
-        Round newRound = new Round(2, "testLinkBack9", "JomezPro");
+        Round newRound = new Round(3, "testLinkBack9", "JomezPro", null,(Tournament) tournamentDao.getById(1));
         int id = roundDao.insert(newRound);
         assertNotEquals(0, id);
         newRound.setRoundId(id);
@@ -67,11 +67,11 @@ public class RoundDaoTest {
     @Test
     void getAllSuccess() {
         List<Round> rounds = roundDao.getAll();
-        assertEquals(1, rounds.size());
+        assertEquals(2, rounds.size());
     }
 
     @Test
-    void findPlayesInRoundSuccess() {
+    void findPlayersInRoundSuccess() {
         Player expectedPlayerInRound = new Player(1, "Ricky", "Wysocki", "RickyWysocki.jpg");
         Round retrievedRound = (Round) roundDao.getById(2);
         Set<PlayersInRound> retrievedPlayers = retrievedRound.getPlayersInRound();
@@ -85,9 +85,18 @@ public class RoundDaoTest {
             currentPlayer = (PlayersInRound) playersList.next();
             if (currentPlayer.getPlayer().getFirstName().equals("Ricky")) {
                 retrievedPlayer = currentPlayer.getPlayer();
+                break;
             }
         }
 
         assertEquals(expectedPlayerInRound, retrievedPlayer);
+    }
+
+    @Test
+    void findTournamentSuccess() {
+        Round retrievedRound = (Round) roundDao.getById(1);
+        Tournament retrievedTournament = retrievedRound.getTournament();
+        Tournament expectedTournamnet = new Tournament("Ledgestone Insurance Open", 2019, "", "");
+        assertEquals(expectedTournamnet, retrievedTournament);
     }
 }

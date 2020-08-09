@@ -73,6 +73,7 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
@@ -148,36 +149,63 @@
 
   <build>
     <finalName>DiscGolfCoverage</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+<!--    <pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;-->
+<!--      <plugins>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-clean-plugin</artifactId>-->
+<!--          <version>3.1.0</version>-->
+<!--        </plugin>-->
+<!--        &lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-resources-plugin</artifactId>-->
+<!--          <version>3.0.2</version>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-compiler-plugin</artifactId>-->
+<!--          <version>3.8.0</version>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-surefire-plugin</artifactId>-->
+<!--          <version>2.22.1</version>-->
+<!--          <dependencies>-->
+<!--            <dependency>-->
+<!--              <groupId>org.junit.platform</groupId>-->
+<!--              <artifactId>junit-platform-surefire-provider</artifactId>-->
+<!--              <version>${junit-platform-runner-version}</version>-->
+<!--            </dependency>-->
+<!--          </dependencies>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-war-plugin</artifactId>-->
+<!--          <version>3.2.2</version>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-install-plugin</artifactId>-->
+<!--          <version>2.5.2</version>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--          <artifactId>maven-deploy-plugin</artifactId>-->
+<!--          <version>2.8.2</version>-->
+<!--        </plugin>-->
+<!--      </plugins>-->
+<!--    </pluginManagement>-->
+    <pluginManagement>
       <plugins>
         <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>${maven-compiler-plugin-version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
+          <version>${maven-surefire-plugin-version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.junit.platform</groupId>
+              <artifactId>junit-platform-surefire-provider</artifactId>
+              <version>${junit-platform-runner-version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
       </plugins>
     </pluginManagement>

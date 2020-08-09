@@ -1,5 +1,6 @@
 package com.doney.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -29,6 +30,7 @@ public class Player {
     private String profilePicture;
 
     @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<PlayersInRound> roundsPlayedIn = new HashSet<>();
 
     public Player() {

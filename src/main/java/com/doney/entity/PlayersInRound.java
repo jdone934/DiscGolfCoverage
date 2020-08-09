@@ -51,8 +51,8 @@ public class PlayersInRound {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PlayersInRound that = (PlayersInRound) o;
-        return round.equals(that.round) &&
-                player.equals(that.player);
+        return Objects.equals(round, that.round) &&
+                Objects.equals(player, that.player);
     }
 
     @Override
