@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TournamentDaoTest {
     GenericDao tournamentDao;
+    GenericDao roundDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -26,6 +27,7 @@ public class TournamentDaoTest {
         database.runSQL("cleandb.sql");
 
         tournamentDao = new GenericDao(Tournament.class);
+        roundDao = new GenericDao(Round.class);
     }
 
     @Test
@@ -122,5 +124,14 @@ public class TournamentDaoTest {
         }
 
         assertEquals(expectedRound, retrievedRound);
+    }
+
+    @Test
+    void tournamentDeleteCascadeSuccess() {
+        Tournament tournamentToDelete = (Tournament) tournamentDao.getById(1);
+        tournamentDao.delete(tournamentToDelete);
+
+        assertNull(roundDao.getById(1));
+        assertNull(roundDao.getById(2));
     }
 }

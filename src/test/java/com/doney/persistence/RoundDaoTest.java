@@ -17,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RoundDaoTest {
     GenericDao roundDao;
     GenericDao tournamentDao;
+    GenericDao playersInRoundDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -28,6 +29,7 @@ public class RoundDaoTest {
 
         roundDao = new GenericDao(Round.class);
         tournamentDao = new GenericDao(Tournament.class);
+        playersInRoundDao = new GenericDao(PlayersInRound.class);
     }
 
     @Test
@@ -98,5 +100,28 @@ public class RoundDaoTest {
         Tournament retrievedTournament = retrievedRound.getTournament();
         Tournament expectedTournamnet = new Tournament("Ledgestone Insurance Open", 2019, "", "");
         assertEquals(expectedTournamnet, retrievedTournament);
+    }
+
+    @Test
+    void roundDeleteCascadeSuccess() {
+        Round roundToDelete = (Round) roundDao.getById(1);
+        roundDao.delete(roundToDelete);
+
+        assertNull(playersInRoundDao.getById(5));
+
+        Tournament tournament = (Tournament) tournamentDao.getById(1);
+        Set<Round> roundsInTournament = tournament.getRounds();
+        Iterator roundsIterator = roundsInTournament.iterator();
+        Round currentRound;
+        Round roundFound = null;
+        while(roundsIterator.hasNext()) {
+            currentRound = (Round) roundsIterator.next();
+            if (currentRound.getRoundId() == 1) {
+                roundFound = currentRound;
+                break;
+            }
+        }
+
+        assertNull(roundFound);
     }
 }

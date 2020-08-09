@@ -203,12 +203,12 @@ INSERT INTO
     VALUES (1, 1);
 
 INSERT INTO
-    players_in_round (roundId, playerId)
-    VALUES (2, 1),
-           (2, 2),
-           (2, 3),
-           (2, 4),
-           (1, 1);
+    players_in_round (players_in_round_id, roundId, playerId)
+    VALUES (1, 2, 1),
+           (2, 2, 2),
+           (3, 2, 3),
+           (4, 2, 4),
+           (5, 1, 1);
 
 INSERT INTO
     commentators (playerId, roundId)
