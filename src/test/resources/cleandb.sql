@@ -200,6 +200,6 @@ INSERT INTO
            (5, 1, 1);
 
 INSERT INTO
-    commentators (playerId, roundId)
-    VALUES (5, 2),
-           (6, 2);
+    commentators (commentators_id, playerId, roundId)
+    VALUES (1, 5, 2),
+           (2, 6, 2);

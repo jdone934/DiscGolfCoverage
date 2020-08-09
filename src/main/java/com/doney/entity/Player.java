@@ -33,6 +33,10 @@ public class Player {
     @JsonIgnore
     private Set<PlayersInRound> roundsPlayedIn = new HashSet<>();
 
+    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Commentators> roundsCommentatedIn = new HashSet<>();
+
     public Player() {
     }
 
@@ -98,6 +102,14 @@ public class Player {
 
     public void setRoundsPlayedIn(Set<PlayersInRound> roundsPlayedIn) {
         this.roundsPlayedIn = roundsPlayedIn;
+    }
+
+    public Set<Commentators> getRoundsCommentatedIn() {
+        return roundsCommentatedIn;
+    }
+
+    public void setRoundsCommentatedIn(Set<Commentators> roundsCommentatedIn) {
+        this.roundsCommentatedIn = roundsCommentatedIn;
     }
 
     @Override

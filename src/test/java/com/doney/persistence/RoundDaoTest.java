@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import com.doney.testUtils.Database;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -18,6 +19,7 @@ public class RoundDaoTest {
     GenericDao roundDao;
     GenericDao tournamentDao;
     GenericDao playersInRoundDao;
+    GenericDao playerDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -30,6 +32,7 @@ public class RoundDaoTest {
         roundDao = new GenericDao(Round.class);
         tournamentDao = new GenericDao(Tournament.class);
         playersInRoundDao = new GenericDao(PlayersInRound.class);
+        playerDao = new GenericDao(Player.class);
     }
 
     @Test
@@ -123,5 +126,21 @@ public class RoundDaoTest {
         }
 
         assertNull(roundFound);
+    }
+
+    @Test
+    void getCommentatorsSuccess() {
+        Round retrievedRound = (Round) roundDao.getById(2);
+        Set<Commentators> retrievedCommentators = retrievedRound.getCommentators();
+        Set<Commentators> expectedCommentators = new HashSet<>();
+
+        Player expectedPlayer1 = (Player) playerDao.getById(5);
+        Player expectedPlayer2 = (Player) playerDao.getById(6);
+        Round expectedRound = new Round(3, "front", 9,"https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s", "JomezPro", null, (Tournament) tournamentDao.getById(1));
+
+        expectedCommentators.add(new Commentators(1, expectedRound, expectedPlayer1));
+        expectedCommentators.add(new Commentators(2, expectedRound, expectedPlayer2));
+
+        assertEquals(expectedCommentators, retrievedCommentators);
     }
 }

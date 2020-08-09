@@ -46,6 +46,10 @@ public class Round {
     @JsonIgnore
     private Tournament tournament;
 
+    @OneToMany(mappedBy = "round", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Commentators> commentators = new HashSet<>();
+
     public Round() {
     }
 
@@ -151,6 +155,14 @@ public class Round {
 
     public void setNumberOfHoles(int numberOfHoles) {
         this.numberOfHoles = numberOfHoles;
+    }
+
+    public Set<Commentators> getCommentators() {
+        return commentators;
+    }
+
+    public void setCommentators(Set<Commentators> commentators) {
+        this.commentators = commentators;
     }
 
     @Override
