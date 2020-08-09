@@ -4,7 +4,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity(name = "Round")
 @Table(name = "round")
@@ -25,6 +27,9 @@ public class Round {
     @NotNull
     @Column(name = "coverage_provider")
     private String coverageProvider;
+
+    @OneToMany(mappedBy = "round", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<PlayersInRound> playersInRound = new HashSet<>();
 
     public Round() {
     }
@@ -72,6 +77,14 @@ public class Round {
 
     public void setCoverageProvider(String coverageProvider) {
         this.coverageProvider = coverageProvider;
+    }
+
+    public Set<PlayersInRound> getPlayersInRound() {
+        return playersInRound;
+    }
+
+    public void setPlayersInRound(Set<PlayersInRound> playersInRound) {
+        this.playersInRound = playersInRound;
     }
 
     @Override

@@ -70,9 +70,10 @@ CREATE TABLE player (
 );
 
 CREATE TABLE favorite_courses (
+    `favorite_courses_id` int(10) NOT NULL AUTO_INCREMENT,
     `courseId` int(10) NOT NULL,
     `userId` int(10) NOT NULL,
-    PRIMARY KEY (`courseId`, `userId`),
+    PRIMARY KEY (`favorite_courses_id`),
     FOREIGN KEY (`courseId`)
         REFERENCES `course` (`courseId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -82,9 +83,10 @@ CREATE TABLE favorite_courses (
 );
 
 CREATE TABLE favorite_tournaments (
+    `favorite_tournaments_id` int(10) NOT NULL AUTO_INCREMENT,
     `tournamentId` int(10) NOT NULL,
     `userId` int(10) NOT NULL,
-    PRIMARY KEY (`tournamentId`, `userId`),
+    PRIMARY KEY (`favorite_tournaments_id`),
     FOREIGN KEY (`tournamentId`)
         REFERENCES `tournament` (`tournamentId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -94,9 +96,10 @@ CREATE TABLE favorite_tournaments (
 );
 
 CREATE TABLE favorite_rounds (
+    `favorite_rounds_id` int(10) NOT NULL AUTO_INCREMENT,
     `roundId` int(10) NOT NULL,
     `userId` int(10) NOT NULL,
-    PRIMARY KEY (`roundId`, `userId`),
+    PRIMARY KEY (`favorite_rounds_id`),
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -106,9 +109,10 @@ CREATE TABLE favorite_rounds (
 );
 
 CREATE TABLE favorite_players (
+    `favorite_players_id` int(10) NOT NULL AUTO_INCREMENT,
     `playerId` int(10) NOT NULL,
     `userId` int(10) NOT NULL,
-    PRIMARY KEY (`playerId`, `userId`),
+    PRIMARY KEY (`favorite_players_id`),
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -118,9 +122,10 @@ CREATE TABLE favorite_players (
 );
 
 CREATE TABLE tournament_at_course (
+    `tournaments_at_course_id` int(10) NOT NULL AUTO_INCREMENT,
     `courseId` int(10) NOT NULL,
     `tournamentId` int(10) NOT NULL,
-    PRIMARY KEY (`courseId`, `tournamentId`),
+    PRIMARY KEY (`tournaments_at_course_id`),
     FOREIGN KEY (`courseId`)
         REFERENCES `course` (`courseId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -130,9 +135,10 @@ CREATE TABLE tournament_at_course (
 );
 
 CREATE TABLE rounds_in_tournament (
+    `rounds_in_tournament_id` int(10) NOT NULL AUTO_INCREMENT,
     `roundId` int(10) NOT NULL,
     `tournamentId` int(10) NOT NULL,
-    PRIMARY KEY (`roundId`, `tournamentId`),
+    PRIMARY KEY (`rounds_in_tournament_id`),
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -142,9 +148,10 @@ CREATE TABLE rounds_in_tournament (
 );
 
 CREATE TABLE players_in_round (
+    `players_in_round_id` int(10) NOT NULL AUTO_INCREMENT,
     `roundId` int(10) NOT NULL,
     `playerId` int(10) NOT NULL,
-    PRIMARY KEY (`roundId`, `playerId`),
+    PRIMARY KEY (`players_in_round_id`),
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -154,9 +161,10 @@ CREATE TABLE players_in_round (
 );
 
 CREATE TABLE commentators (
+    `commentators_id` int(10) NOT NULL AUTO_INCREMENT,
     `playerId` int(10) NOT NULL,
     `roundId` int(10) NOT NULL,
-    PRIMARY KEY (`playerId`, `roundId`),
+    PRIMARY KEY (`commentators_id`),
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -171,32 +179,42 @@ INSERT INTO
 
 INSERT INTO
     player (playerId, first_name, last_name, profile_picture)
-    VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg');
+    VALUES (1, 'Ricky', 'Wysocki', 'RickyWysocki.jpg'),
+           (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg'),
+           (3, 'Reid', 'Frescura', 'ReidFrescura.jpg'),
+           (4, 'Kevin', 'Jones', 'KevinJones.jpg'),
+           (5, 'Jeremy', 'Koling', 'JeremyKoling.jpg'),
+           (6, 'Nate', 'Perkins', 'NatePerkins.jpg');
 
 INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (2, 'Paul', 'McBeth', 'PaulMcBeth.jpg');
-
-INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (3, 'Reid', 'Frescura', 'ReidFrescura.jpg');
-
-INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (4, 'Kevin', 'Jones', 'KevinJones.jpg');
-
-INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (5, 'Jeremy', 'Koling', 'JeremyKoling.jpg');
-
-INSERT INTO
-    player (playerId, first_name, last_name, profile_picture)
-    VALUES (6, 'Nate', 'Perkins', 'NatePerkins.jpg');
-
-INSERT INTO
-    tournament (name, year, tournamentSeries, website)
-    VALUES ('Ledgestone Insurance Open', 2019, '', '');
+    tournament (tournamentId, name, year, tournamentSeries, website)
+    VALUES (1, 'Ledgestone Insurance Open', 2019, '', '');
 
 INSERT INTO
     course (courseId, name, location_city, location_state, location_country, website)
     VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', '');
+
+INSERT INTO
+    round (roundId, round_number, coverage_link, coverage_provider)
+    VALUES (2, 3, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro');
+
+INSERT INTO
+    tournament_at_course (courseId, tournamentId)
+    VALUES (1, 1);
+
+INSERT INTO
+    rounds_in_tournament (roundId, tournamentId)
+    VALUES (2, 1);
+
+INSERT INTO
+    players_in_round (roundId, playerId)
+    VALUES (2, 1),
+           (2, 2),
+           (2, 3),
+           (2, 4),
+           (1, 1);
+
+INSERT INTO
+    commentators (playerId, roundId)
+    VALUES (5, 2),
+           (6, 2);

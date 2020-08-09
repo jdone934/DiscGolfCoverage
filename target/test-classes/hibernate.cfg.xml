@@ -20,6 +20,7 @@
         <mapping class="com.doney.entity.Player" />
         <mapping class="com.doney.entity.Tournament" />
         <mapping class="com.doney.entity.Course" />
+        <mapping class="com.doney.entity.PlayersInRound" />
     </session-factory>
 
 </hibernate-configuration>

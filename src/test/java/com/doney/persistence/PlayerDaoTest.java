@@ -1,6 +1,7 @@
 package com.doney.persistence;
 
 import com.doney.entity.Player;
+import com.doney.entity.PlayersInRound;
 import com.doney.entity.Round;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,9 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import com.doney.testUtils.Database;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import javax.validation.constraints.NotNull;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -101,5 +101,26 @@ public class PlayerDaoTest {
         Player playerFound = players.get(0);
         Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
         assertEquals(expectedPlayer, playerFound);
+    }
+
+    @Test
+    void findRoundsPlayerInSuccess() {
+        Round expectedRound = new Round(1, 2, "testLink", "JomezPro");
+        Player retrievedPlayer = (Player) playerDao.getById(1);
+        Set<PlayersInRound> roundsPlayedIn = retrievedPlayer.getRoundsPlayedIn();
+
+        assertEquals(2, roundsPlayedIn.size());
+
+        Iterator rounds = roundsPlayedIn.iterator();
+        Round roundFromRetrieved = null;
+        PlayersInRound currentRound;
+        while (rounds.hasNext()) {
+            currentRound = (PlayersInRound) rounds.next();
+            if(currentRound.getRound().getRoundId() == 1) {
+                roundFromRetrieved = currentRound.getRound();
+            }
+        }
+
+        assertEquals(expectedRound, roundFromRetrieved);
     }
 }

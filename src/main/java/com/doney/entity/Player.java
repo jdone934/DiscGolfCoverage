@@ -4,7 +4,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity(name = "Player")
 @Table(name = "player")
@@ -25,6 +27,9 @@ public class Player {
     @NotNull
     @Column(name = "profile_picture")
     private String profilePicture;
+
+    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<PlayersInRound> roundsPlayedIn = new HashSet<>();
 
     public Player() {
     }
@@ -83,6 +88,14 @@ public class Player {
 
     public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
+    }
+
+    public Set<PlayersInRound> getRoundsPlayedIn() {
+        return roundsPlayedIn;
+    }
+
+    public void setRoundsPlayedIn(Set<PlayersInRound> roundsPlayedIn) {
+        this.roundsPlayedIn = roundsPlayedIn;
     }
 
     @Override

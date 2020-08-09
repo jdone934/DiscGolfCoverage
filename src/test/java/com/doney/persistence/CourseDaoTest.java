@@ -1,7 +1,6 @@
 package com.doney.persistence;
 
 import com.doney.entity.Course;
-import com.doney.entity.Player;
 import com.doney.testUtils.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
