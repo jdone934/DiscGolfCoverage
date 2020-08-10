@@ -1,6 +1,7 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
+    <%@taglib uri="http://doneyTag.com/tags" prefix="jd" %>
 </head>
 <body>
     <%@include file="template/navbar.jsp"%>
@@ -10,23 +11,13 @@
     <h2>Players in Round</h2>
     <c:forEach var="playerFromList" items="${round.playersInRound}">
         <c:set var="player" value="${playerFromList.player}" />
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="playerProfilePictures/${player.profilePicture}" alt="player profile picture">
-            <div class="card-body">
-                <a class="card-text" href="playerProfile?id=${player.playerId}">${player.firstName} ${player.lastName}</a>
-            </div>
-        </div>
+        <jd:Hello player="${player}"/>
     </c:forEach>
 
     <h2>Commentators</h2>
     <c:forEach var="commentatorsList" items="${round.commentators}">
         <c:set var="commentator" value="${commentatorsList.player}" />
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="playerProfilePictures/${commentator.profilePicture}" alt="player profile picture">
-            <div class="card-body">
-                <a class="card-text" href="playerProfile?id=${commentator.playerId}">${commentator.firstName} ${commentator.lastName}</a>
-            </div>
-        </div>
+        <jd:Hello player="${commentator}"/>
     </c:forEach>
 </body>
 </html>
