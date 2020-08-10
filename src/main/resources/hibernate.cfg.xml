@@ -22,6 +22,7 @@
         <mapping class="com.doney.entity.Course" />
         <mapping class="com.doney.entity.PlayersInRound" />
         <mapping class="com.doney.entity.Commentators" />
+        <mapping class="com.doney.entity.TournamentAtCourse" />
     </session-factory>
 
 </hibernate-configuration>

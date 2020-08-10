@@ -1,6 +1,8 @@
 package com.doney.persistence;
 
 import com.doney.entity.Course;
+import com.doney.entity.Tournament;
+import com.doney.entity.TournamentAtCourse;
 import com.doney.testUtils.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,9 +10,7 @@ import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -102,5 +102,29 @@ public class CourseDaoTest {
         Course courseFound = courses.get(0);
         Course expectedCourse = new Course("Ledgestone", "Eureka", "IL", "US");
         assertEquals(expectedCourse, courseFound);
+    }
+
+    @Test
+    void getTournamentsAtCourse() {
+        Course retrievedCourse = (Course) courseDao.getById(1);
+        Set<TournamentAtCourse> tournamentList = retrievedCourse.getTournamentsAtCourse();
+
+        assertEquals(1, tournamentList.size());
+
+        Iterator iterator = tournamentList.iterator();
+        Tournament retrievedTournament = null;
+        TournamentAtCourse currentTournamentAtCourse;
+        Tournament currentTournament;
+        while (iterator.hasNext()) {
+            currentTournamentAtCourse = (TournamentAtCourse) iterator.next();
+            currentTournament = currentTournamentAtCourse.getTournament();
+            if(currentTournament.getTournamentId() == 1) {
+                retrievedTournament = currentTournament;
+                break;
+            }
+        }
+
+        Tournament expectedTournament = new Tournament("Ledgestone Insurance Open", 2019, "", "");
+        assertEquals(expectedTournament, retrievedTournament);
     }
 }

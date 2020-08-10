@@ -1,32 +1,50 @@
 package com.doney.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tournament_at_course")
 public class TournamentAtCourse {
     @Id
-    @Column(name = "courseId")
-    private Integer courseId;
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "tournaments_at_course_id")
+    private Integer tournamentAtCourseId;
 
-    @Id
-    @Column(name = "tournamentId")
-    private Integer tournamentId;
+    @ManyToOne
+    @JoinColumn(name = "courseId")
+    private Course course;
 
+    @ManyToOne
+    @JoinColumn(name = "tournamentId")
+    private Tournament tournament;
 
-    public Integer getCourseId() {
-        return this.courseId;
+    public TournamentAtCourse() {
     }
 
-    public void setCourseId(Integer courseId) {
-        this.courseId = courseId;
+    public Integer getTournamentAtCourseId() {
+        return tournamentAtCourseId;
     }
 
-    public Integer getTournamentId() {
-        return this.tournamentId;
+    public void setTournamentAtCourseId(Integer tournamentAtCourseId) {
+        this.tournamentAtCourseId = tournamentAtCourseId;
     }
 
-    public void setTournamentId(Integer tournamentId) {
-        this.tournamentId = tournamentId;
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public Tournament getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(Tournament tournament) {
+        this.tournament = tournament;
     }
 }

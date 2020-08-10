@@ -1,8 +1,9 @@
 package com.doney.persistence;
 
-import com.doney.entity.Player;
+import com.doney.entity.Course;
 import com.doney.entity.Round;
 import com.doney.entity.Tournament;
+import com.doney.entity.TournamentAtCourse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
@@ -134,5 +135,30 @@ public class TournamentDaoTest {
 
         assertNull(roundDao.getById(1));
         assertNull(roundDao.getById(2));
+    }
+
+    @Test
+    void findCoursesSuccess() {
+        Tournament retrievedTournament = (Tournament) tournamentDao.getById(1);
+        Set<TournamentAtCourse> courseList = retrievedTournament.getCoursesAtTournament();
+
+        assertEquals(1, courseList.size());
+
+        Iterator iterator = courseList.iterator();
+        Course retrievedCourse = null;
+        TournamentAtCourse currentTournamentAtCourse;
+        Course currentCourse;
+        while(iterator.hasNext()) {
+            currentTournamentAtCourse = (TournamentAtCourse) iterator.next();
+            currentCourse = currentTournamentAtCourse.getCourse();
+            if (currentCourse.getCourseId() == 1) {
+                retrievedCourse = currentCourse;
+                break;
+            }
+        }
+
+        Course expectedCourse = new Course("Ledgestone", "Eureka", "IL", "US");
+
+        assertEquals(expectedCourse, retrievedCourse);
     }
 }

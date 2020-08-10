@@ -3,7 +3,9 @@ package com.doney.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "course")
@@ -27,6 +29,9 @@ public class Course {
 
     @Column(name = "website")
     private String website;
+
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<TournamentAtCourse> tournamentsAtCourse = new HashSet<>();
 
     public Course() {
     }
@@ -105,6 +110,14 @@ public class Course {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public Set<TournamentAtCourse> getTournamentsAtCourse() {
+        return tournamentsAtCourse;
+    }
+
+    public void setTournamentsAtCourse(Set<TournamentAtCourse> tournamentsAtCourse) {
+        this.tournamentsAtCourse = tournamentsAtCourse;
     }
 
     @Override

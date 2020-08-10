@@ -28,7 +28,10 @@ public class Tournament {
     private String website;
 
     @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Round> rounds = new HashSet<>();
+    private Set<Round> rounds = new HashSet<Round>();
+
+    @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<TournamentAtCourse> coursesAtTournament = new HashSet<TournamentAtCourse>();
 
     public Tournament() {
     }
@@ -105,6 +108,14 @@ public class Tournament {
 
     public void setRounds(Set<Round> rounds) {
         this.rounds = rounds;
+    }
+
+    public Set<TournamentAtCourse> getCoursesAtTournament() {
+        return coursesAtTournament;
+    }
+
+    public void setCoursesAtTournament(Set<TournamentAtCourse> coursesAtTournament) {
+        this.coursesAtTournament = coursesAtTournament;
     }
 
     @Override
