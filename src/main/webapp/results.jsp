@@ -21,8 +21,19 @@
         </c:if>
         <c:forEach var="tournament" items="${tournaments}" varStatus="loop">
             <div class="row">
-                <div class="col-4">${tournament.name}: ${tournament.year}</div>
-                <div class="col-4 offset-4"></div>
+                <div class="col-4">
+                    <a href="viewTournament?id=${tournament.tournamentId}">${tournament.name}: ${tournament.year}</a>
+                </div>
+                <div class="col-4 offset-4">
+                    <div class="row">
+                        <c:forEach var="courseList" items="${tournament.coursesAtTournament}">
+                            <c:set var="course" value="${courseList.course}" />
+                            <div class="col-12">
+                                <a href="viewCourse?id=${course.courseId}">${course.name}</a>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
             </div>
         </c:forEach>
     </c:if>
