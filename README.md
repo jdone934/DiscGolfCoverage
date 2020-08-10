@@ -35,6 +35,12 @@ Given that this website will be a hub for watching Disc Golf coverage, I also pl
   * IntelliJ IDEA
 * API
   * Youtube (to embed videos on website)
+  
+* Research Topics
+    * Custom Tag Library
+
+###Custom Tag Library
+I am using a custom tag library to generate the html for the player cards. The repo for that library [can be found here](https://github.com/jdone934/DiscGolfCoverageTags).
 
 ### Design
 
