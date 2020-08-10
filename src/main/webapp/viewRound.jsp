@@ -14,13 +14,13 @@
     <h2>Players in Round</h2>
     <c:forEach var="playerFromList" items="${round.playersInRound}">
         <c:set var="player" value="${playerFromList.player}" />
-        <jd:Hello player="${player}"/>
+        <jd:playerCard player="${player}"/>
     </c:forEach>
 
     <h2>Commentators</h2>
     <c:forEach var="commentatorsList" items="${round.commentators}">
         <c:set var="commentator" value="${commentatorsList.player}" />
-        <jd:Hello player="${commentator}"/>
+        <jd:playerCard player="${commentator}"/>
     </c:forEach>
 </body>
 </html>

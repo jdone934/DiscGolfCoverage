@@ -11,7 +11,7 @@
             <h1>Players Found</h1>
         </c:if>
         <c:forEach var="player" items="${players}" varStatus="loop">
-            <jd:Hello player="${player}"/>
+            <jd:playerCard player="${player}"/>
         </c:forEach>
     </c:if>
 
