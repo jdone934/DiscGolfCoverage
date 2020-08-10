@@ -20,7 +20,10 @@
             <h1>Tournaments Found</h1>
         </c:if>
         <c:forEach var="tournament" items="${tournaments}" varStatus="loop">
-            ${tournament.name}: ${tournament.year}<hr>
+            <div class="row">
+                <div class="col-4">${tournament.name}: ${tournament.year}</div>
+                <div class="col-4 offset-4"></div>
+            </div>
         </c:forEach>
     </c:if>
 
