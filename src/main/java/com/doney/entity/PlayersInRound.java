@@ -22,6 +22,9 @@ public class PlayersInRound {
     @JoinColumn(name = "playerId")
     private Player player;
 
+    public PlayersInRound() {
+    }
+
     public Integer getPlayersInRoundId() {
         return playersInRoundId;
     }

@@ -1,6 +1,7 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
+    <%@taglib uri="http://doneyTag.com/tags" prefix="jd" %>
 </head>
 <body class="container-fluid">
     <%@include file="template/navbar.jsp"%>
@@ -10,12 +11,7 @@
             <h1>Players Found</h1>
         </c:if>
         <c:forEach var="player" items="${players}" varStatus="loop">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="playerProfilePictures/${player.profilePicture}" alt="player profile picture">
-                <div class="card-body">
-                    <a class="card-text" href="playerProfile?id=${player.playerId}">${player.firstName} ${player.lastName}</a>
-                </div>
-            </div>
+            <jd:Hello player="${player}"/>
         </c:forEach>
     </c:if>
 
