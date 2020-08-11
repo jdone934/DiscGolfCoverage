@@ -1,6 +1,6 @@
 package com.doney.controller;
 
-import com.doney.entity.Player;
+import com.doney.entity.Course;
 import com.doney.entity.Round;
 import com.doney.persistence.GenericDao;
 import com.doney.utility.YoutubeHelper;
@@ -14,19 +14,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(
-    urlPatterns = {"/viewRound"}
+    urlPatterns = {"/viewCourse"}
 )
-public class ViewRound extends HttpServlet {
+public class ViewCourse extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        GenericDao roundDao = new GenericDao(Round.class);
-        Round round = (Round) roundDao.getById(Integer.parseInt(req.getParameter("id")));
-        req.setAttribute("round", round);
+        GenericDao courseDao = new GenericDao(Course.class);
+        Course course = (Course) courseDao.getById(Integer.parseInt(req.getParameter("id")));
+        req.setAttribute("course", course);
 
-        YoutubeHelper helper = new YoutubeHelper(round.getCoverageLink());
-        req.setAttribute("embedUrl", helper.getEmbedUrl());
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/viewRound.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/viewCourse.jsp");
         dispatcher.forward(req, resp);
     }
 }

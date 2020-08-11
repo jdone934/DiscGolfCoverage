@@ -43,7 +43,10 @@
             <h1>Courses Found</h1>
         </c:if>
         <c:forEach var="course" items="${courses}" varStatus="loop">
-            ${course.name}: ${course.locationCity}, ${course.locationState}<hr>
+            <a href="viewCourse?id=${course.courseId}">
+                ${course.name}: ${course.locationCity}, ${course.locationState}
+            </a>
+            <hr>
         </c:forEach>
     </c:if>
 </body>
