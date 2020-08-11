@@ -203,3 +203,8 @@ INSERT INTO
     commentators (commentators_id, playerId, roundId)
     VALUES (1, 5, 2),
            (2, 6, 2);
+
+INSERT INTO
+    user (userId, username, password, first_name, last_name, email)
+    VALUES (1, 'jdone934', 'password', 'Jacob', 'Doney', 'jdone934@hotmail.com'),
+           (2, 'lktucker', 'knittingRocks', 'Laura', 'Tucker', 'lktucker@gmail.com');

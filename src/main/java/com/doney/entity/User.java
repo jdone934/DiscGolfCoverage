@@ -1,18 +1,20 @@
 package com.doney.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "user")
 public class User {
     @Id
-    @Column(name = "userId")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Integer userId;
 
-    @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
     private String password;
 
     @Column(name = "first_name")
@@ -21,9 +23,40 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email")
     private String email;
 
+    public User() {
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
+    public User(Integer userId, String username, String password, String email) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
+    public User(String username, String password, String firstName, String lastName, String email) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public User(Integer userId, String username, String password, String firstName, String lastName, String email) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
     public Integer getUserId() {
         return this.userId;
@@ -71,5 +104,20 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return username.equals(user.username) &&
+                password.equals(user.password) &&
+                email.equals(user.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, password, email);
     }
 }
