@@ -37,7 +37,7 @@
             <li class="nav-item">
 
                 <c:if test="${empty pageContext.request.getRemoteUser()}">
-                    <a class="nav-link" href="login${path}" >Login</a>
+                    <a class="nav-link" href="login">Login</a>
                 </c:if>
 
                 <c:if test="${not empty pageContext.request.getRemoteUser()}">
