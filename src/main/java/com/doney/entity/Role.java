@@ -1,12 +1,16 @@
 package com.doney.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "role")
 public class Role {
     @Id
-    @Column(name = "roleId")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Integer roleId;
 
     @Column(name = "role_name")
@@ -15,9 +19,27 @@ public class Role {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "user_id")
-    private Integer userId;
+    @ManyToOne
+    @JoinColumn(name = "userId",
+            foreignKey = @ForeignKey(name = "role_user_user_id_fk")
+    )
+    private User user;
 
+    public Role() {
+    }
+
+    public Role(String roleName, String username, User user) {
+        this.roleName = roleName;
+        this.username = username;
+        this.user = user;
+    }
+
+    public Role(Integer roleId, String roleName, String username, User user) {
+        this.roleId = roleId;
+        this.roleName = roleName;
+        this.username = username;
+        this.user = user;
+    }
 
     public Integer getRoleId() {
         return this.roleId;
@@ -43,11 +65,25 @@ public class Role {
         this.username = username;
     }
 
-    public Integer getUserId() {
-        return this.userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Role role = (Role) o;
+        return Objects.equals(roleName, role.roleName) &&
+                Objects.equals(user, role.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roleName, username);
     }
 }

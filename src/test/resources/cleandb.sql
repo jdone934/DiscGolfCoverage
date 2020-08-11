@@ -26,9 +26,9 @@ CREATE TABLE role (
     `roleId` int(10) NOT NULL AUTO_INCREMENT,
     `role_name` varchar(50) NOT NULL,
     `username` varchar(25) NOT NULL,
-    `user_id` int(10) NOT NULL,
+    `userId` int(10) NOT NULL,
     PRIMARY KEY (`roleId`),
-    FOREIGN KEY (`user_id`)
+    FOREIGN KEY (`userId`)
         REFERENCES `user` (`userId`)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -208,3 +208,9 @@ INSERT INTO
     user (userId, username, password, first_name, last_name, email)
     VALUES (1, 'jdone934', 'password', 'Jacob', 'Doney', 'jdone934@hotmail.com'),
            (2, 'lktucker', 'knittingRocks', 'Laura', 'Tucker', 'lktucker@gmail.com');
+
+INSERT INTO
+    role (roleId, role_name, username, userId)
+    VALUES (1, 'admin', 'jdone934', 1),
+           (2, 'user', 'jdone934', 1),
+           (3, 'user', 'lktucker', 2);
