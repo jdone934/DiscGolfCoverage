@@ -1,5 +1,6 @@
 package com.doney.persistence;
 
+import com.doney.entity.Role;
 import com.doney.entity.User;
 import com.doney.testUtils.Database;
 import org.apache.logging.log4j.LogManager;
@@ -8,7 +9,10 @@ import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -76,5 +80,19 @@ public class UserDaoTest {
         User userFound = users.get(0);
         User expectedUser = new User("jdone934", "password", "jdone934@hotmail.com");
         assertEquals(expectedUser, userFound);
+    }
+
+    @Test
+    void getRoleSuccess() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Role> retrievedRoles = retrievedUser.getRoles();
+
+        assertEquals(2, retrievedRoles.size());
+
+        Set<Role> expectedRoles = new HashSet<>();
+        expectedRoles.add(new Role("admin", "jdone934", retrievedUser));
+        expectedRoles.add(new Role("user", "jdone934", retrievedUser));
+
+        assertEquals(expectedRoles, retrievedRoles);
     }
 }
