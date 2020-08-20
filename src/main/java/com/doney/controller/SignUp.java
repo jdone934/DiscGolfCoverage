@@ -55,7 +55,7 @@ public class SignUp extends HttpServlet {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/signUp.jsp");
             dispatcher.forward(req, resp);
         } else {
-            User user = new User(username, password, email, firstName, lastName);
+            User user = new User(username, password, firstName, lastName, email);
 
             int id = 0;
 
