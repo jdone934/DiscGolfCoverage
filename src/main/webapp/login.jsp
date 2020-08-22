@@ -8,7 +8,7 @@
 
 <div class="header">
     <nav class="navbar navbar-expand-sm navbar-dark">
-        <a href="/CookingRecipes" id="homeLink">Easy Cook</a>
+        <a href="/DiscGolfCoverage" id="homeLink">Disc Golf Coverage</a>
     </nav>
     <div class="display-4 text-center">
         Log In

@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/logout/*"}
+        urlPatterns = {"/logout/*", "/adminOnly/logout/*"}
 )
 
 public class Logout extends HttpServlet {
