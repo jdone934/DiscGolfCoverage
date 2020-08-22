@@ -135,4 +135,14 @@ public class Course {
     public int hashCode() {
         return Objects.hash(name, locationCity, locationState, locationCountry);
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                ", locationCity='" + locationCity + '\'' +
+                ", locationState='" + locationState + '\'' +
+                ", locationCountry='" + locationCountry + '\'' +
+                '}';
+    }
 }
