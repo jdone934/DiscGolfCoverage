@@ -10,7 +10,7 @@
 
     <h1 class="text-center">Add New Player</h1>
 
-    <form id="newPlayer" method="post" action="newPlayer" class="" onsubmit="">
+    <form id="newPlayer" method="post" action="newPlayer" class="" onsubmit="" enctype="multipart/form-data">
         <div id="errorMessage">
             <c:if test="${not empty errorMessage}">
                 <div class="alert alert-danger" role="alert">
@@ -36,8 +36,15 @@
             <input type="text" class="form-control" name="lastName" id="lastName">
         </div>
 
+        <div class="form-group">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" class="form-control" name="profilePicture" id="profilePicture" accept="image/*">
+        </div>
+
         <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
     </form>
+
+    <a href="newCourse">Add a new Course</a>
 </div>
 </body>
 </body>
