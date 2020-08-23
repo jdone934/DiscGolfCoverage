@@ -10,7 +10,7 @@
 
     <h1 class="text-center">Add New Tournament</h1>
 
-    <form id="newPlayer" method="post" action="newTournament" class="" onsubmit="" enctype="multipart/form-data">
+    <form id="newPlayer" method="post" action="newTournament" class="" onsubmit="">
         <div id="errorMessage">
             <c:if test="${not empty errorMessage}">
                 <div class="alert alert-danger" role="alert">
@@ -28,22 +28,26 @@
 
         <div class="form-group">
             <label for="tournamentName">Tournament Name</label>
-            <input type="text" class="form-control", name="tournamentName" id="tournamentName">
+            <input type="text" class="form-control" name="tournamentName" id="tournamentName" required
+            <c:if test="${not empty tournamentName}">value="${tournamentName}" </c:if> >
+
         </div>
 
         <div class="form-group">
             <label for="year">Year</label>
-            <input type="number" class="form-control", name="year" id="year" value="2020">
+            <input type="number" class="form-control" name="year" id="year" value="2020" required
+                   <c:if test="${not empty year}">value="${year}" </c:if>>
         </div>
 
         <div class="form-group">
             <label for="tournamentSeries">Tournament Series</label>
-            <input type="text" class="form-control", name="tournamentSeries" id="tournamentSeries">
+            <input type="text" class="form-control" name="tournamentSeries" id="tournamentSeries" required
+                   <c:if test="${not empty tournamentSeries}">value="${tournamentSeries}" </c:if>>
         </div>
 
         <div class="form-group">
             <label for="courseSearch">Courses</label>
-            <input type="text" class="form-control", name="courseSearch" id="courseSearch">
+            <input type="text" class="form-control" name="courseSearch" id="courseSearch">
             <div id="searchForCourses" class="btn btn-primary" tabindex="0">Search</div>
         </div>
 
@@ -60,6 +64,5 @@
 
     <a href="newCoverageProvider">Add a new Coverage Provider</a>
 </div>
-</body>
 </body>
 </html>

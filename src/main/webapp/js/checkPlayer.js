@@ -86,6 +86,7 @@ const courseLinkBuilder = (course, addOrRemove) => {
         input.setAttribute("name", "coursesForTournament");
         input.setAttribute("value", course.courseId);
         input.setAttribute("class", "addedCourse")
+        input.checked = true;
     }
 
     courseToBuild.appendChild(input);
