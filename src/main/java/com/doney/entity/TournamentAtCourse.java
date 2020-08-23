@@ -24,6 +24,11 @@ public class TournamentAtCourse {
     public TournamentAtCourse() {
     }
 
+    public TournamentAtCourse(Course course, Tournament tournament) {
+        this.course = course;
+        this.tournament = tournament;
+    }
+
     public Integer getTournamentAtCourseId() {
         return tournamentAtCourseId;
     }

@@ -41,8 +41,14 @@
 
         <div class="form-group">
             <label for="tournamentSeries">Tournament Series</label>
-            <input type="text" class="form-control" name="tournamentSeries" id="tournamentSeries" required
+            <input type="text" class="form-control" name="tournamentSeries" id="tournamentSeries"
                    <c:if test="${not empty tournamentSeries}">value="${tournamentSeries}" </c:if>>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Tournament Website</label>
+            <input type="text" class="form-control" name="website" id="website"
+                   <c:if test="${not empty website}">value="${website}" </c:if>>
         </div>
 
         <div class="form-group">
