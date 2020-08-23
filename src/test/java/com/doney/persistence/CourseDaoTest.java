@@ -97,6 +97,8 @@ public class CourseDaoTest {
         Map<String, Object> propertyMap = new HashMap<>();
         propertyMap.put("name", "Ledgestone");
         propertyMap.put("locationState", "IL");
+        propertyMap.put("locationCity", "Eureka");
+        propertyMap.put("locationCountry", "US");
         List<Course> courses = courseDao.findByPropertyEqual(propertyMap);
         assertEquals(1, courses.size());
         Course courseFound = courses.get(0);
