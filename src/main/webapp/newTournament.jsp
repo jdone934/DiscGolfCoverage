@@ -2,6 +2,7 @@
 <head>
     <%@include file="template/head.jsp" %>
     <script src="/DiscGolfCoverage/js/checkPlayer.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 <div class="container-fluid">
@@ -43,14 +44,18 @@
         <div class="form-group">
             <label for="courseSearch">Courses</label>
             <input type="text" class="form-control", name="courseSearch" id="courseSearch">
-            <div id="searchForCourses" class="btn btn-primary">Search</div>
+            <div id="searchForCourses" class="btn btn-primary" tabindex="0">Search</div>
         </div>
 
         <div id="searchResults">
 
         </div>
 
-        <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+        <div id="addedCourses">
+            <h2>Added Courses</h2>
+        </div>
+
+        <button type="submit" id="submitButton" class="btn btn-primary">Add Tournament</button>
     </form>
 
     <a href="newCoverageProvider">Add a new Coverage Provider</a>

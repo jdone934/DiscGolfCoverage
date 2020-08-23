@@ -9,3 +9,13 @@
 .adminMain {
     margin-top: 2em;
 }
+
+.addButton:hover {
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    positon: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
