@@ -23,7 +23,6 @@
             <tr><td><a href="newPlayer">New Player</a></td></tr>
             <tr><td><a href="newCourse">New Course</a></td></tr>
             <tr><td><a href="newTournament">New Tournament</a></td></tr>
-            <tr><td><a href="newProvider">New Coverage Provider</a></td></tr>
             <tr><td><a href="newRound">New Round Coverage</a></td></tr>
         </table>
     </div>

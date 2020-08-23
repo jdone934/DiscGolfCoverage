@@ -68,7 +68,7 @@
         <button type="submit" id="submitButton" class="btn btn-primary">Add Tournament</button>
     </form>
 
-    <a href="newCoverageProvider">Add a new Coverage Provider</a>
+    <a href="newRoundCoverage">Add new coverage of a round</a>
 </div>
 </body>
 </html>
