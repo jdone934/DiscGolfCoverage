@@ -1,7 +1,7 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
-    <link rel="stylesheet" href="style/searchForm.css" />
+    <script src="/DiscGolfCoverage/js/checkPlayer.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -44,6 +44,10 @@
             <label for="courseSearch">Courses</label>
             <input type="text" class="form-control", name="courseSearch" id="courseSearch">
             <div id="searchForCourses" class="btn btn-primary">Search</div>
+        </div>
+
+        <div id="searchResults">
+
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>

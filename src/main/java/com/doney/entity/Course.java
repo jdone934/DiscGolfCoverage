@@ -1,5 +1,6 @@
 package com.doney.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -31,6 +32,7 @@ public class Course {
     private String website;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<TournamentAtCourse> tournamentsAtCourse = new HashSet<>();
 
     public Course() {
