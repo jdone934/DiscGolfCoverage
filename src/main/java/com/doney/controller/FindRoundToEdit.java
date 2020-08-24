@@ -34,7 +34,7 @@ public class FindRoundToEdit extends HttpServlet {
             Round round = (Round) roundDao.getById(roundId);
             if (round != null) {
                 req.setAttribute("round", round);
-                dispatcher = req.getRequestDispatcher("/editRoundSearchResults.jsp");
+                dispatcher = req.getRequestDispatcher("/editRound.jsp");
             } else {
                 req.setAttribute("errorMessage", "No Round was found with id: " + roundId);
                 dispatcher = req.getRequestDispatcher("/adminHome.jsp");
@@ -45,7 +45,9 @@ public class FindRoundToEdit extends HttpServlet {
 
             Map<String, Object> propertyMap = new HashMap<>();
             propertyMap.put("name", tournamentName);
-            propertyMap.put("year", tournamentYear);
+            if (tournamentYear > 0) {
+                propertyMap.put("year", tournamentYear);
+            }
 
             GenericDao tournamentDao = new GenericDao(Tournament.class);
             List<Tournament> tournaments = tournamentDao.findByPropertyLikeMap(propertyMap);

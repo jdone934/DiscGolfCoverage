@@ -56,7 +56,7 @@
 
         <div class="form-group tournament searchField">
             <label for="tournamentYear">Tournament Year</label>
-            <input type="number" name="tournamentYear" id="tournamentYear" class="form-control" value="2020">
+            <input type="number" name="tournamentYear" id="tournamentYear" class="form-control">
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Search</button>
