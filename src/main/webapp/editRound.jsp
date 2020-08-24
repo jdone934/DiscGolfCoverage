@@ -5,8 +5,9 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%@ include file="template/head.jsp"%>
-    <link rel="stylesheet" href="../style/adminSearchForm.css">
-    <script src="../js/adminHomeFormControl.js"></script>
+    <script src="/DiscGolfCoverage/js/searchTournament.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/searchPlayer.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 <div class="header">
@@ -17,7 +18,110 @@
 </div>
 
 <div class="adminMain container">
-    <a href="${round.coverageLink}">Coverage</a>
+<form id="newRound" method="post" action="editRound">
+    <div id="errorMessage">
+        <c:if test="${not empty errorMessage}">
+            <div class="alert alert-danger" role="alert">
+                    ${errorMessage}
+            </div>
+        </c:if>
+    </div>
+    <div id="successMessage">
+        <c:if test="${not empty successMessage}">
+            <div class="alert alert-success" role="alert">
+                    ${successMessage}
+            </div>
+        </c:if>
+    </div>
+
+    <div class="form-group">
+        <label for="roundNumber">Round Number</label>
+        <input type="number" class="form-control" name="roundNumber" id="roundNumber" required
+               <c:if test="${not empty round.roundNumber}">value="${round.roundNumber}" </c:if> >
+
+    </div>
+
+    <div class="form-group">
+        <label for="coverageLink">Coverage Link</label>
+        <input type="text" class="form-control" name="coverageLink" id="coverageLink" required
+               <c:if test="${not empty round.coverageLink}">value="${round.coverageLink}" </c:if> >
+
+    </div>
+
+    <div class="form-group">
+        <label for="coverageProvider">Coverage Provider</label>
+        <input type="text" class="form-control" name="coverageProvider" id="coverageProvider" required
+               <c:if test="${not empty round.coverageProvider}">value="${round.coverageProvider}" </c:if> >
+
+    </div>
+
+    <div class="form-group">
+        <label for="frontVsBack">Front or Back</label>
+        <select type="select" class="form-control" name="frontVsBack" id="frontVsBack">
+            <option value="front">Front</option>
+            <option value="back">Back</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="numberOfHoles">Number Of Holes</label>
+        <input type="number" class="form-control" name="numberOfHoles" id="numberOfHoles" required
+               <c:if test="${not empty round.numberOfHoles}">value="${round.numberOfHoles}" </c:if>
+    </div>
+
+    <div class="form-group">
+        <label for="tournamentSearch">Tournament</label>
+        <input type="text" class="form-control" name="tournamentSearch" id="tournamentSearch">
+        <div id="searchForTournaments" class="btn btn-primary" tabindex="0">Search</div>
+    </div>
+
+    <div id="tournamentSearchResults">
+
+    </div>
+
+    <div id="addedTournament">
+        <h2>Added Tournament</h2>
+        <label class="tournamentResult d-flex justify-content-center checkbox-label">
+            <c:set var="tournament" value="${round.tournament}" />
+            <input type="checkbox" name="tournamentForRound" value="${tournament.tournamentId}" class="addedCourse">
+            <a href="/DiscGolfCoverage/viewTournament?id=${tournament.tournamentId}" target="_blank">${tournament.name}</a>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for="playerFirstName">Player First Name</label>
+        <input type="text" class="form-control" name="playerFirstName" id="playerFirstName">
+        <label for="playerLastName">Player Last Name</label>
+        <input type="text" class="form-control" name="playerLastName" id="playerLastName">
+        <div id="searchForPlayers" class="btn btn-primary" tabindex="0">Search</div>
+    </div>
+
+    <div id="playerSearchResults">
+
+    </div>
+
+    <div id="addedPlayers">
+        <h2>Added Players</h2>
+    </div>
+
+    <div class="form-group">
+        <label for="commentatorFirstName">Commentator First Name</label>
+        <input type="text" class="form-control" name="commentatorFirstName" id="commentatorFirstName">
+        <label for="commentatorLastName">Commentator Last Name</label>
+        <input type="text" class="form-control" name="commentatorLastName" id="commentatorLastName">
+        <div id="searchForCommentators" class="btn btn-primary" tabindex="0">Search</div>
+    </div>
+
+    <div id="commentatorSearchResults">
+
+    </div>
+
+    <div id="addedCommentators">
+        <h2>Added Commentators</h2>
+    </div>
+
+    <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>
+</form>
 </div>
 
 </body>
