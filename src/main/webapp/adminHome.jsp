@@ -5,6 +5,8 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%@ include file="template/head.jsp"%>
+    <link rel="stylesheet" href="../style/adminSearchForm.css">
+    <script src="../js/adminHomeFormControl.js"></script>
 </head>
 <body>
 <div class="header">
@@ -26,6 +28,34 @@
             <tr><td><a href="newRound">New Round Coverage</a></td></tr>
         </table>
     </div>
+
+    <h2 class="text-center">Edit Round</h2>
+    <form id="findRound" method="post" action="findRoundToEdit">
+        <div class="form-group">
+            <label for="searchType">Search Type</label>
+            <select id="searchType" name="searchType" class="form-control">
+                <option value="roundId">Round Id</option>
+                <option value="tournament">Tournament</option>
+            </select>
+        </div>
+
+        <div class="form-group roundId searchField">
+            <label for="roundId">Id</label>
+            <input type="text" name="roundId" id="roundId" class="form-control">
+        </div>
+
+        <div class="form-group tournament searchField">
+            <label for="tournamentName">Tournament Name</label>
+            <input type="text" name="tournamentName" id="tournamentName" class="form-control">
+        </div>
+
+        <div class="form-group tournament searchField">
+            <label for="tournamentYear">Tournament Year</label>
+            <input type="number" name="tournamentYear" id="tournamentYear" class="form-control" value="2020">
+        </div>
+
+        <button type="submit" id="submitButton" class="btn btn-primary">Search</button>
+    </form>
 </div>
 
 </body>
