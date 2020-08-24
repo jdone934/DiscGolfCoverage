@@ -3,6 +3,7 @@ package com.doney.controller;
 import com.doney.entity.Round;
 import com.doney.entity.Tournament;
 import com.doney.persistence.GenericDao;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,11 +42,12 @@ public class FindRoundToEdit extends HttpServlet {
             }
         } else {
            String tournamentName = req.getParameter("tournamentName");
-           int tournamentYear = Integer.parseInt(req.getParameter("tournamentYear"));
+           int tournamentYear = 0;
 
             Map<String, Object> propertyMap = new HashMap<>();
             propertyMap.put("name", tournamentName);
-            if (tournamentYear > 0) {
+            if (NumberUtils.isCreatable(req.getParameter("tournamentYear"))) {
+                tournamentYear = Integer.parseInt(req.getParameter("tournamentYear"));
                 propertyMap.put("year", tournamentYear);
             }
 
@@ -54,7 +56,7 @@ public class FindRoundToEdit extends HttpServlet {
 
             if (tournaments.size() > 0) {
                 req.setAttribute("tournaments", tournaments);
-                dispatcher = req.getRequestDispatcher("editRoundSearchResults.jsp");
+                dispatcher = req.getRequestDispatcher("/editRoundSearchResults.jsp");
             } else {
                 String errorMessage = "No tournaments named " + tournamentName;
                 if (tournamentYear > 0) {

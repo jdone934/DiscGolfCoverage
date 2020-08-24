@@ -17,7 +17,7 @@
 </div>
 
 <div class="adminMain container">
-
+    <a href="${round.coverageLink}">Coverage</a>
 </div>
 
 </body>
