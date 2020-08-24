@@ -2,6 +2,7 @@
 <head>
     <%@include file="template/head.jsp" %>
     <script src="/DiscGolfCoverage/js/searchTournament.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/searchPlayer.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -28,7 +29,7 @@
 
         <div class="form-group">
             <label for="roundNumber">Round Number</label>
-            <input type="text" class="form-control" name="roundNumber" id="roundNumber" required
+            <input type="number" class="form-control" name="roundNumber" id="roundNumber" required
                    <c:if test="${not empty roundNumber}">value="${roundNumber}" </c:if> >
 
         </div>
@@ -75,6 +76,22 @@
 
         <div id="addedTournament">
             <h2>Added Tournament</h2>
+        </div>
+
+        <div class="form-group">
+            <label for="playerFirstName">Player First Name</label>
+            <input type="text" class="form-control" name="playerFirstName" id="playerFirstName">
+            <label for="playerLastName">Player Last Name</label>
+            <input type="text" class="form-control" name="playerLastName" id="playerLastName">
+            <div id="searchForPlayers" class="btn btn-primary" tabindex="0">Search</div>
+        </div>
+
+        <div id="playerSearchResults">
+
+        </div>
+
+        <div id="addedPlayers">
+            <h2>Added Players</h2>
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>

@@ -1,4 +1,4 @@
-const init = () => {
+const tournamentInit = () => {
     document.querySelector("#searchForTournaments").addEventListener("click", searchTournament);
 }
 
@@ -79,5 +79,3 @@ const tournamentLinkBuilder = (tournament, addOrRemove) => {
 
     return tournamentToBuild;
 }
-
-window.onload = init;

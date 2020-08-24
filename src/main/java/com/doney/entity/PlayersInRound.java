@@ -25,6 +25,11 @@ public class PlayersInRound {
     public PlayersInRound() {
     }
 
+    public PlayersInRound(Round round, Player player) {
+        this.round = round;
+        this.player = player;
+    }
+
     public Integer getPlayersInRoundId() {
         return playersInRoundId;
     }
