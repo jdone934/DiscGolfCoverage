@@ -1,7 +1,7 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
-    <script src="/DiscGolfCoverage/js/checkPlayer.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/searchCourse.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -10,7 +10,7 @@
 
     <h1 class="text-center">Add New Tournament</h1>
 
-    <form id="newPlayer" method="post" action="newTournament" class="" onsubmit="">
+    <form id="newTournament" method="post" action="newTournament" class="" onsubmit="">
         <div id="errorMessage">
             <c:if test="${not empty errorMessage}">
                 <div class="alert alert-danger" role="alert">
@@ -68,7 +68,7 @@
         <button type="submit" id="submitButton" class="btn btn-primary">Add Tournament</button>
     </form>
 
-    <a href="newRoundCoverage">Add new coverage of a round</a>
+    <a href="newRound">Add new coverage of a round</a>
 </div>
 </body>
 </html>
