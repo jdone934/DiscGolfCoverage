@@ -30,6 +30,11 @@
     </div>
 
     <h2 class="text-center">Edit Round</h2>
+    <c:if test="${not empty errorMessage}">
+        <div class="alert alert-danger" role="alert">
+                ${errorMessage}
+        </div>
+    </c:if>
     <form id="findRound" method="post" action="findRoundToEdit">
         <div class="form-group">
             <label for="searchType">Search Type</label>

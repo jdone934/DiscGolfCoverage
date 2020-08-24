@@ -6,7 +6,6 @@ const updateForm = event => {
     let searchType = event.target.value;
     hideForm();
     showSearchTypeFields(searchType);
-    document.querySelector("#findRound").setAttribute("action", "searchBy" + searchType.charAt(0).toUpperCase() + searchType.slice(1));
 }
 
 const hideForm = () => {
