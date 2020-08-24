@@ -94,6 +94,22 @@
             <h2>Added Players</h2>
         </div>
 
+        <div class="form-group">
+            <label for="commentatorFirstName">Commentator First Name</label>
+            <input type="text" class="form-control" name="commentatorFirstName" id="commentatorFirstName">
+            <label for="commentatorLastName">Commentator Last Name</label>
+            <input type="text" class="form-control" name="commentatorLastName" id="commentatorLastName">
+            <div id="searchForCommentators" class="btn btn-primary" tabindex="0">Search</div>
+        </div>
+
+        <div id="commentatorSearchResults">
+
+        </div>
+
+        <div id="addedCommentators">
+            <h2>Added Commentators</h2>
+        </div>
+
         <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>
     </form>
 

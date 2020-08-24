@@ -1,5 +1,6 @@
 const playerInit = () => {
     document.querySelector("#searchForPlayers").addEventListener("click", searchPlayers);
+    document.querySelector("#searchForCommentators").addEventListener("click", searchCommentators);
 }
 
 const searchPlayers = async() => {
@@ -10,6 +11,16 @@ const searchPlayers = async() => {
     let playerLastName = document.querySelector("#playerLastName").value;
     let players = await getPlayers(playerFirstName, playerLastName);
     printPlayers(players);
+}
+
+const searchCommentators = async() => {
+    let resultsSection = document.querySelector("#commentatorSearchResults")
+    resultsSection.innerHTML = "Loading...";
+
+    let commentatorFirstName = document.querySelector("#playerFirstName").value;
+    let commentatorLastName = document.querySelector("#playerLastName").value;
+    let commentators = await getPlayers(commentatorFirstName, commentatorLastName);
+    printCommentators(commentators);
 }
 
 const getPlayers = async(firstName, lastName)=> {
@@ -26,18 +37,33 @@ const printPlayers = players => {
     let resultsSection = document.querySelector("#playerSearchResults")
     resultsSection.innerHTML = "";
     players.forEach(player => {
-        let newPlayer = playerLinkBuilder(player, "add");
+        let newPlayer = playerLinkBuilder(player, "add", "player");
 
         resultsSection.appendChild(newPlayer);
     })
 }
 
-const addPlayer = player => {
-    if (playerNotInList(player)) {
-        let playerToAdd = playerLinkBuilder(player, "remove");
+const printCommentators = commentators => {
+    let resultsSection = document.querySelector("#commentatorSearchResults")
+    resultsSection.innerHTML = "";
+    commentators.forEach(player => {
+        let newCommentator = playerLinkBuilder(player, "add", "commentator");
 
-        let addedPlayers = document.querySelector("#addedPlayers");
-        addedPlayers.appendChild(playerToAdd);
+        resultsSection.appendChild(newCommentator);
+    })
+}
+
+const addPlayer = (player, playerOrCommentator) => {
+    if (playerNotInList(player)) {
+        let playerToAdd = playerLinkBuilder(player, "remove", playerOrCommentator);
+
+        if (playerOrCommentator === "player") {
+            let addedPlayers = document.querySelector("#addedPlayers");
+            addedPlayers.appendChild(playerToAdd);
+        } else {
+            let addedCommentators = document.querySelector("#addedCommentators");
+            addedCommentators.appendChild(playerToAdd);
+        }
     }
 }
 
@@ -60,7 +86,7 @@ const playerNotInList = player => {
     return notInList;
 }
 
-const playerLinkBuilder = (player, addOrRemove) => {
+const playerLinkBuilder = (player, addOrRemove, playerOrCommentator) => {
     let playerToBuild = document.createElement("label");
     playerToBuild.setAttribute("class", "playerResult d-flex justify-content-center checkbox-label");
 
@@ -78,15 +104,21 @@ const playerLinkBuilder = (player, addOrRemove) => {
     if (addOrRemove === "add"){
         addOrRemoveButton.innerHTML = "add_circle_outline";
         addOrRemoveButton.addEventListener("click", function () {
-            addPlayer(player);
+            addPlayer(player, playerOrCommentator);
         });
     } else {
         addOrRemoveButton.innerHTML = "delete";
         addOrRemoveButton.addEventListener("click", deletePlayer);
 
-        input.setAttribute("name", "playersInRound");
+        if (playerOrCommentator === "player"){
+            input.setAttribute("name", "playersInRound");
+            input.setAttribute("class", "addedPlayer")
+        } else {
+            input.setAttribute("name", "commentatorsInRound");
+            input.setAttribute("class", "addedCommentator")
+        }
+
         input.setAttribute("value", player.playerId);
-        input.setAttribute("class", "addedPlayer")
         input.checked = true;
     }
 
