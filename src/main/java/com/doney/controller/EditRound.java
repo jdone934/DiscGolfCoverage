@@ -1,7 +1,8 @@
 package com.doney.controller;
 
-import com.doney.entity.Round;
+import com.doney.entity.*;
 import com.doney.persistence.GenericDao;
+import com.doney.utility.RoundFormHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,6 +25,16 @@ public class EditRound extends HttpServlet {
         GenericDao roundDao = new GenericDao(Round.class);
         Round round = (Round) roundDao.getById(Integer.parseInt(req.getParameter("roundId")));
         req.setAttribute("round", round);
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/editRound.jsp");
+        dispatcher.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RoundFormHelper helper = new RoundFormHelper(req, true);
+        helper.processForm();
+        req = helper.getReq();
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/editRound.jsp");
         dispatcher.forward(req, resp);

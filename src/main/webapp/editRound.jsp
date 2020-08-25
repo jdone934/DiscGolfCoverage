@@ -84,7 +84,7 @@
         <h2>Added Tournament</h2>
         <label class="tournamentResult d-flex justify-content-center checkbox-label">
             <c:set var="tournament" value="${round.tournament}" />
-            <input type="checkbox" name="tournamentForRound" value="${tournament.tournamentId}" class="addedCourse">
+            <input type="checkbox" name="tournamentForRound" value="${tournament.tournamentId}" class="addedCourse" checked>
             <a href="/DiscGolfCoverage/viewTournament?id=${tournament.tournamentId}" target="_blank">${tournament.name}</a>
         </label>
     </div>
@@ -106,7 +106,7 @@
         <c:forEach var="playerConnector" items="${round.playersInRound}" varStatus="loop">
             <c:set var="player" value="${playerConnector.player}" />
             <label class="playerResult d-flex justify-content-center checkbox-label">
-                <input type="checkbox" name="playersInRound" class="addedPlayer" value="${player.playerId}">
+                <input type="checkbox" name="playersInRound" class="addedPlayer" value="${player.playerId}" checked>
                 <a href="/DiscGolfCoverage/playerProfile?id=${player.playerId}" target="_blank">${player.firstName} ${player.lastName}</a>
                 <i class="material-icons addOrRemoveButton">delete</i>
             </label>
@@ -130,12 +130,14 @@
         <c:forEach var="commentatorConnector" items="${round.commentators}" varStatus="loop">
             <c:set var="commentator" value="${commentatorConnector.player}" />
             <label class="playerResult d-flex justify-content-center checkbox-label">
-                <input type="checkbox" name="playersInRound" class="addedPlayer" value="${commentator.playerId}">
+                <input type="checkbox" name="commentatorsInRound" class="addedPlayer" value="${commentator.playerId}" checked>
                 <a href="/DiscGolfCoverage/playerProfile?id=${commentator.playerId}" target="_blank">${commentator.firstName} ${commentator.lastName}</a>
                 <i class="material-icons addOrRemoveButton">delete</i>
             </label>
         </c:forEach>
     </div>
+
+    <input type="hidden" name="roundId" value="${round.roundId}">
 
     <button type="submit" id="submitButton" class="btn btn-primary">Edit Round</button>
 </form>

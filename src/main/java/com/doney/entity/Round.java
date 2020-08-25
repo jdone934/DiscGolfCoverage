@@ -102,6 +102,16 @@ public class Round {
         this.tournament = tournament;
     }
 
+    public Round(Integer roundId, Integer roundNumber, String frontVsBack, int numberOfHoles, String coverageLink, String coverageProvider, Tournament tournament) {
+        this.roundId = roundId;
+        this.roundNumber = roundNumber;
+        this.frontVsBack = frontVsBack;
+        this.numberOfHoles = numberOfHoles;
+        this.coverageLink = coverageLink;
+        this.coverageProvider = coverageProvider;
+        this.tournament = tournament;
+    }
+
     public Integer getRoundId() {
         return this.roundId;
     }

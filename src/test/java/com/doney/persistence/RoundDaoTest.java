@@ -108,7 +108,8 @@ public class RoundDaoTest {
 
         Set<PlayersInRound> playersInRoundsToUpdate = new HashSet<>();
         playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(3)));
-        playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(4)));
+        playersInRoundsToUpdate.add(new PlayersInRound(
+                testRound, (Player) playerDao.getById(4)));
         playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(5)));
         playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(6)));
 

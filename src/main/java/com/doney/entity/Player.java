@@ -29,7 +29,7 @@ public class Player {
     @Column(name = "profile_picture")
     private String profilePicture;
 
-    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "player", fetch = FetchType.EAGER)
     @JsonIgnore
     private Set<PlayersInRound> roundsPlayedIn = new HashSet<>();
 
@@ -125,5 +125,13 @@ public class Player {
     @Override
     public int hashCode() {
         return Objects.hash(playerId, firstName, lastName);
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }

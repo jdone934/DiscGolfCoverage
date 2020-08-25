@@ -146,10 +146,10 @@ CREATE TABLE players_in_round (
     PRIMARY KEY (`players_in_round_id`),
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
-        ON UPDATE CASCADE ON DELETE CASCADE,
+        ON UPDATE CASCADE,
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 CREATE TABLE commentators (
@@ -159,10 +159,10 @@ CREATE TABLE commentators (
     PRIMARY KEY (`commentators_id`),
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
-        ON UPDATE CASCADE ON DELETE CASCADE,
+        ON UPDATE CASCADE,
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO
@@ -176,20 +176,24 @@ INSERT INTO
 
 INSERT INTO
     tournament (tournamentId, name, year, tournamentSeries, website)
-    VALUES (1, 'Ledgestone Insurance Open', 2019, '', '');
+    VALUES (1, 'Ledgestone Insurance Open', 2019, '', ''),
+           (2, 'Mad City Open', 2020, 'Glide Series', 'facebook');
 
 INSERT INTO
     course (courseId, name, location_city, location_state, location_country, website)
-    VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', '');
+    VALUES (1, 'Ledgestone', 'Eureka', 'IL', 'US', ''),
+           (2, 'Hiestand', 'Madison', 'WI', 'us', 'facebook');
 
 INSERT INTO
     round (roundId, round_number, tournamentId, front_vs_back, number_of_holes, coverage_link, coverage_provider)
     VALUES (1, 2, 1, 'front', 9, 'testLink', 'JomezPro'),
-           (2, 3, 1, 'front', 9, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro');
+           (2, 3, 1, 'front', 9, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro'),
+           (3, 5, 2, 'front', 9, 'asdf', 'asdf');
 
 INSERT INTO
     tournament_at_course (courseId, tournamentId)
-    VALUES (1, 1);
+    VALUES (1, 1),
+           (2, 2);
 
 INSERT INTO
     players_in_round (players_in_round_id, roundId, playerId)
@@ -197,12 +201,15 @@ INSERT INTO
            (2, 2, 2),
            (3, 2, 3),
            (4, 2, 4),
-           (5, 1, 1);
+           (5, 1, 1),
+           (6, 3, 1),
+           (7, 3, 2);
 
 INSERT INTO
     commentators (commentators_id, playerId, roundId)
     VALUES (1, 5, 2),
-           (2, 6, 2);
+           (2, 6, 2),
+           (3, 5, 3);
 
 INSERT INTO
     user (userId, username, password, first_name, last_name, email)
