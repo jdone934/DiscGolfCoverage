@@ -130,7 +130,7 @@
         <c:forEach var="commentatorConnector" items="${round.commentators}" varStatus="loop">
             <c:set var="commentator" value="${commentatorConnector.player}" />
             <label class="playerResult d-flex justify-content-center checkbox-label">
-                <input type="checkbox" name="commentatorsInRound" class="addedPlayer" value="${commentator.playerId}" checked>
+                <input type="checkbox" name="commentatorsInRound" class="addedCommentator" value="${commentator.playerId}" checked>
                 <a href="/DiscGolfCoverage/playerProfile?id=${commentator.playerId}" target="_blank">${commentator.firstName} ${commentator.lastName}</a>
                 <i class="material-icons addOrRemoveButton">delete</i>
             </label>

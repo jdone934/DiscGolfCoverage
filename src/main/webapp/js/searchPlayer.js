@@ -54,7 +54,7 @@ const printCommentators = commentators => {
 }
 
 const addPlayer = (player, playerOrCommentator) => {
-    if (playerNotInList(player)) {
+    if (playerNotInList(player, playerOrCommentator)) {
         let playerToAdd = playerLinkBuilder(player, "remove", playerOrCommentator);
 
         if (playerOrCommentator === "player") {
@@ -73,9 +73,14 @@ const deletePlayer = event => {
     parent.removeChild(playerGroup);
 }
 
-const playerNotInList = player => {
+const playerNotInList = (player, playerOrCommentator) => {
     let notInList = true;
-    let addedPlayer = document.querySelectorAll(".addedPlayer");
+    let addedPlayer;
+    if (playerOrCommentator == "player") {
+        addedPlayer = document.querySelectorAll(".addedPlayer");
+    } else {
+        addedPlayer = document.querySelectorAll(".addedCommentator");
+    }
 
     addedPlayer.forEach(testPlayer => {
         if (testPlayer.value == player.playerId) {
