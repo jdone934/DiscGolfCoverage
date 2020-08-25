@@ -102,6 +102,14 @@
 
     <div id="addedPlayers">
         <h2>Added Players</h2>
+        <c:forEach var="playerConnector" items="${round.playersInRound}" varStatus="loop">
+            <c:set var="player" value="${playerConnector.player}" />
+            <label class="playerResult d-flex justify-content-center checkbox-label">
+                <input type="checkbox" name="playersInRound" class="addedPlayer" value="${player.playerId}">
+                <a href="/DiscGolfCoverage/playerProfile?id=${player.playerId}" target="_blank">${player.firstName} ${player.lastName}</a>
+                <i class="material-icons addOrRemoveButton">delete</i>
+            </label>
+        </c:forEach>
     </div>
 
     <div class="form-group">
@@ -118,6 +126,14 @@
 
     <div id="addedCommentators">
         <h2>Added Commentators</h2>
+        <c:forEach var="commentatorConnector" items="${round.commentators}" varStatus="loop">
+            <c:set var="commentator" value="${commentatorConnector.player}" />
+            <label class="playerResult d-flex justify-content-center checkbox-label">
+                <input type="checkbox" name="playersInRound" class="addedPlayer" value="${commentator.playerId}">
+                <a href="/DiscGolfCoverage/playerProfile?id=${commentator.playerId}" target="_blank">${commentator.firstName} ${commentator.lastName}</a>
+                <i class="material-icons addOrRemoveButton">delete</i>
+            </label>
+        </c:forEach>
     </div>
 
     <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>
