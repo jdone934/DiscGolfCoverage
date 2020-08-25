@@ -98,6 +98,29 @@ public class RoundDaoTest {
     }
 
     @Test
+    void updatePlayerInRoundSuccess() {
+        Round testRound = (Round) roundDao.getById(2);
+        Set<PlayersInRound> playersInRoundConnectors = testRound.getPlayersInRound();
+
+        for (PlayersInRound connector : playersInRoundConnectors) {
+            playersInRoundDao.delete(connector);
+        }
+
+        Set<PlayersInRound> playersInRoundsToUpdate = new HashSet<>();
+        playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(3)));
+        playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(4)));
+        playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(5)));
+        playersInRoundsToUpdate.add(new PlayersInRound(testRound, (Player) playerDao.getById(6)));
+
+        testRound.setPlayersInRound(playersInRoundsToUpdate);
+        roundDao.saveOrUpdate(testRound);
+        assertNull(playersInRoundDao.getById(1));
+
+        Round testRoundAfterUpdate = (Round) roundDao.getById(2);
+        assertEquals(playersInRoundsToUpdate, testRoundAfterUpdate.getPlayersInRound());
+    }
+
+    @Test
     void findTournamentSuccess() {
         Round retrievedRound = (Round) roundDao.getById(1);
         Tournament retrievedTournament = retrievedRound.getTournament();
