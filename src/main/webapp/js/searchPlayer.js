@@ -132,4 +132,5 @@ const playerLinkBuilder = (player, addOrRemove, playerOrCommentator) => {
 window.onload = () => {
     tournamentInit();
     playerInit();
+    editRoundInit();
 };

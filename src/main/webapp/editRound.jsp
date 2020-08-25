@@ -7,6 +7,7 @@
     <%@ include file="template/head.jsp"%>
     <script src="/DiscGolfCoverage/js/searchTournament.js" charset="utf-8"></script>
     <script src="/DiscGolfCoverage/js/searchPlayer.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/editRound.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -136,7 +137,7 @@
         </c:forEach>
     </div>
 
-    <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>
+    <button type="submit" id="submitButton" class="btn btn-primary">Edit Round</button>
 </form>
 </div>
 
