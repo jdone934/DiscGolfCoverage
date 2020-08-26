@@ -72,7 +72,7 @@ public class RoundDaoTest {
     @Test
     void getAllSuccess() {
         List<Round> rounds = roundDao.getAll();
-        assertEquals(2, rounds.size());
+        assertEquals(3, rounds.size());
     }
 
     @Test

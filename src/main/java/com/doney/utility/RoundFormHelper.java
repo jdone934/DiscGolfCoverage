@@ -50,19 +50,26 @@ public class RoundFormHelper {
         if ((req.getParameter("tournamentForRound")) != null) {
             tournamentId = Integer.parseInt(req.getParameter("tournamentForRound"));
             if (players != null && players.length > 0) {
+                GenericDao commentatorDao = new GenericDao(Commentators.class);
                 GenericDao tournamentDao = new GenericDao(Tournament.class);
+
                 Tournament tournament = (Tournament) tournamentDao.getById(tournamentId);
 
                 Round roundToInsert;
-                Round roundToDeleteFrom = (Round) roundDao.getById(roundId);
+                Round roundToDeleteFrom;
 
                 if (!forEdit) {
                     roundToInsert = new Round(roundNumber, frontVsBack, numberOfHoles, coverageLink, coverageProvider, tournament);
                     roundDao.insert(roundToInsert);
                 } else {
+                    roundToDeleteFrom = (Round) roundDao.getById(roundId);
                     GenericDao playersInRoundDao = new GenericDao(PlayersInRound.class);
                     for (PlayersInRound connector : roundToDeleteFrom.getPlayersInRound()) {
                         playersInRoundDao.delete(connector);
+                    }
+
+                    for(Commentators connector : roundToDeleteFrom.getCommentators()) {
+                        commentatorDao.delete(connector);
                     }
 
                     roundToInsert = new Round(roundId, roundNumber, frontVsBack, numberOfHoles, coverageLink, coverageProvider, tournament);
@@ -84,11 +91,6 @@ public class RoundFormHelper {
                         successMessage = "Round successfully edited";
                     }
                     req.setAttribute("successMessage", successMessage);
-                }
-
-                GenericDao commentatorDao = new GenericDao(Commentators.class);
-                for(Commentators connector : roundToDeleteFrom.getCommentators()) {
-                    commentatorDao.delete(connector);
                 }
 
                 String[] commentatorIds = req.getParameterValues("commentatorsInRound");

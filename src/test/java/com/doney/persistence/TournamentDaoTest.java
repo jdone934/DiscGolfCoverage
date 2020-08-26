@@ -69,7 +69,7 @@ public class TournamentDaoTest {
     @Test
     void getAllSuccess() {
         List<Tournament> tournaments = tournamentDao.getAll();
-        assertEquals(1, tournaments.size());
+        assertEquals(2, tournaments.size());
     }
 
     @Test

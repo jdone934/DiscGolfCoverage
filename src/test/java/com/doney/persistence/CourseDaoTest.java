@@ -69,7 +69,7 @@ public class CourseDaoTest {
     @Test
     void getAllSuccess() {
         List<Course> courses = courseDao.getAll();
-        assertEquals(1, courses.size());
+        assertEquals(2, courses.size());
     }
 
     @Test
@@ -128,11 +128,5 @@ public class CourseDaoTest {
 
         Tournament expectedTournament = new Tournament("Ledgestone Insurance Open", 2019, "", "");
         assertEquals(expectedTournament, retrievedTournament);
-    }
-
-    @Test
-    void testingSub() {
-        String path = "/home/jdoney/IdeaProjects/DiscGolfCoverage/target/DiscGolfCoverage/src/main/webapp/";
-        assertEquals(0, path.substring(0, 43));
     }
 }

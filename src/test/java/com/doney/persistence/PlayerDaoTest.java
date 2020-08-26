@@ -112,7 +112,7 @@ public class PlayerDaoTest {
         Player retrievedPlayer = (Player) playerDao.getById(1);
         Set<PlayersInRound> roundsPlayedIn = retrievedPlayer.getRoundsPlayedIn();
 
-        assertEquals(2, roundsPlayedIn.size());
+        assertEquals(3, roundsPlayedIn.size());
 
         Iterator rounds = roundsPlayedIn.iterator();
         Round roundFromRetrieved = null;

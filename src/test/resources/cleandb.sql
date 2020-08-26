@@ -146,10 +146,10 @@ CREATE TABLE players_in_round (
     PRIMARY KEY (`players_in_round_id`),
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
-        ON UPDATE CASCADE,
+        ON UPDATE CASCADE ON DELETE CASCADE ,
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
-        ON UPDATE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE commentators (
