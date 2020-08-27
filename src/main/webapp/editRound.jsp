@@ -14,7 +14,7 @@
 <div class="header">
     <%@ include file="template/navbar.jsp"%>
     <div class="display-4 text-center">
-        Edit Round
+        Edit Round <i class="material-icons deleteRound">delete</i>
     </div>
 </div>
 
@@ -59,8 +59,8 @@
     <div class="form-group">
         <label for="frontVsBack">Front or Back</label>
         <select type="select" class="form-control" name="frontVsBack" id="frontVsBack">
-            <option value="front">Front</option>
-            <option value="back">Back</option>
+            <option value="Front">Front</option>
+            <option value="Back">Back</option>
         </select>
     </div>
 
@@ -137,7 +137,7 @@
         </c:forEach>
     </div>
 
-    <input type="hidden" name="roundId" value="${round.roundId}">
+    <input type="hidden" id="roundId" name="roundId" value="${round.roundId}">
 
     <button type="submit" id="submitButton" class="btn btn-primary">Edit Round</button>
 </form>

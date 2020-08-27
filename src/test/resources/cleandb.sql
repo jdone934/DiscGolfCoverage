@@ -159,10 +159,10 @@ CREATE TABLE commentators (
     PRIMARY KEY (`commentators_id`),
     FOREIGN KEY (`playerId`)
         REFERENCES `player` (`playerId`)
-        ON UPDATE CASCADE,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (`roundId`)
         REFERENCES `round` (`roundId`)
-        ON UPDATE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 INSERT INTO
@@ -186,9 +186,9 @@ INSERT INTO
 
 INSERT INTO
     round (roundId, round_number, tournamentId, front_vs_back, number_of_holes, coverage_link, coverage_provider)
-    VALUES (1, 2, 1, 'front', 9, 'testLink', 'JomezPro'),
-           (2, 3, 1, 'front', 9, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro'),
-           (3, 5, 2, 'front', 9, 'asdf', 'asdf');
+    VALUES (1, 2, 1, 'Front', 9, 'testLink', 'JomezPro'),
+           (2, 3, 1, 'Front', 9, 'https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s', 'JomezPro'),
+           (3, 5, 2, 'Front', 9, 'asdf', 'asdf');
 
 INSERT INTO
     tournament_at_course (courseId, tournamentId)

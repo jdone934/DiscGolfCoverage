@@ -51,8 +51,8 @@
         <div class="form-group">
             <label for="frontVsBack">Front or Back</label>
             <select type="select" class="form-control" name="frontVsBack" id="frontVsBack">
-                <option value="front">Front</option>
-                <option value="back">Back</option>
+                <option value="Front">Front</option>
+                <option value="Back">Back</option>
             </select>
         </div>
 

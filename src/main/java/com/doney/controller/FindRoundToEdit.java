@@ -31,14 +31,20 @@ public class FindRoundToEdit extends HttpServlet {
         RequestDispatcher dispatcher = null;
 
         if (searchType.equals("roundId")) {
-            int roundId = Integer.parseInt(req.getParameter("roundId"));
-            Round round = (Round) roundDao.getById(roundId);
-            if (round != null) {
-                req.setAttribute("round", round);
-                dispatcher = req.getRequestDispatcher("/editRound.jsp");
+            if (NumberUtils.isCreatable(req.getParameter("roundId"))) {
+                int roundId = Integer.parseInt(req.getParameter("roundId"));
+                Round round = (Round) roundDao.getById(roundId);
+                if (round != null) {
+                    req.setAttribute("round", round);
+                    dispatcher = req.getRequestDispatcher("/editRound.jsp");
+                } else {
+                    req.setAttribute("errorMessage", "No Round was found with id: " + roundId);
+                    dispatcher = req.getRequestDispatcher("/adminHome.jsp");
+                }
             } else {
-                req.setAttribute("errorMessage", "No Round was found with id: " + roundId);
-                dispatcher = req.getRequestDispatcher("/adminHome.jsp");
+                List<Round> rounds = roundDao.getAll();
+                req.setAttribute("rounds", rounds);
+                dispatcher = req.getRequestDispatcher("/editRoundRoundSearchResults.jsp");
             }
         } else {
            String tournamentName = req.getParameter("tournamentName");
@@ -56,7 +62,7 @@ public class FindRoundToEdit extends HttpServlet {
 
             if (tournaments.size() > 0) {
                 req.setAttribute("tournaments", tournaments);
-                dispatcher = req.getRequestDispatcher("/editRoundSearchResults.jsp");
+                dispatcher = req.getRequestDispatcher("/editRoundTournamentSearchResults.jsp");
             } else {
                 String errorMessage = "No tournaments named " + tournamentName;
                 if (tournamentYear > 0) {

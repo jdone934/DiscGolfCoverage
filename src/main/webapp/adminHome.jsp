@@ -35,6 +35,11 @@
                 ${errorMessage}
         </div>
     </c:if>
+    <c:if test="${not empty successMessage}">
+        <div class="alert alert-success" role="alert">
+                ${successMessage}
+        </div>
+    </c:if>
     <form id="findRound" method="post" action="findRoundToEdit">
         <div class="form-group">
             <label for="searchType">Search Type</label>

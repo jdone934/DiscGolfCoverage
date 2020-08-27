@@ -20,7 +20,7 @@
 
             <c:if test="${not empty pageContext.request.getRemoteUser()}">
                 <li class="nav-item">
-                    <a class="nav-link" href="profile">Profile</a>
+                    <a class="nav-link" href="/DiscGolfCoverage/profile">Profile</a>
                 </li>
             </c:if>
 

@@ -94,11 +94,13 @@ public class RoundFormHelper {
                 }
 
                 String[] commentatorIds = req.getParameterValues("commentatorsInRound");
-                for (String commentatorIdString : commentatorIds) {
-                    int commentatorId = Integer.parseInt(commentatorIdString);
-                    Player commentator = (Player) playerDao.getById(commentatorId);
-                    Commentators commentatorConnector = new Commentators(roundToInsert, commentator);
-                    commentatorDao.insert(commentatorConnector);
+                if (commentatorIds != null) {
+                    for (String commentatorIdString : commentatorIds) {
+                        int commentatorId = Integer.parseInt(commentatorIdString);
+                        Player commentator = (Player) playerDao.getById(commentatorId);
+                        Commentators commentatorConnector = new Commentators(roundToInsert, commentator);
+                        commentatorDao.insert(commentatorConnector);
+                    }
                 }
             } else {
                 errorMessage = "You need to enter at least one player";
