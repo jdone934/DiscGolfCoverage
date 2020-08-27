@@ -2,7 +2,9 @@ package com.doney.controller;
 
 import com.doney.entity.Player;
 import com.doney.entity.Round;
+import com.doney.entity.User;
 import com.doney.persistence.GenericDao;
+import com.doney.utility.LoggedInUser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -40,8 +42,13 @@ public class PlayerSearch extends HttpServlet {
         req.setAttribute("players", results);
         logger.info("Search for player with first name " + firstName + " and last name " + lastName);
 
+        LoggedInUser helper = new LoggedInUser();
+        User user = helper.getLoggedInUser(req);
+        if (user != null) {
+            req.setAttribute("user", user);
+        }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
     }
-
 }

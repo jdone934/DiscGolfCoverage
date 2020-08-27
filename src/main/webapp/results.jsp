@@ -2,6 +2,8 @@
 <head>
     <%@include file="template/head.jsp" %>
     <%@taglib uri="http://doneyTag.com/tags" prefix="jd" %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/toggleFavorite.js"></script>
 </head>
 <body class="container-fluid">
     <%@include file="template/navbar.jsp"%>
@@ -11,7 +13,12 @@
             <h1>Players Found</h1>
         </c:if>
         <c:forEach var="player" items="${players}" varStatus="loop">
-            <jd:playerCard player="${player}"/>
+            <c:if test="${not empty user}">
+                <jd:playerCard player="${player}" user="${user}"/>
+            </c:if>
+            <c:if test="${empty user}">
+                <jd:playerCard player="${player}"/>
+            </c:if>
         </c:forEach>
     </c:if>
 
