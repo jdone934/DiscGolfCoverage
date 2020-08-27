@@ -1,7 +1,9 @@
 package com.doney.controller;
 
 import com.doney.entity.Player;
+import com.doney.entity.User;
 import com.doney.persistence.GenericDao;
+import com.doney.utility.LoggedInUser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,6 +26,15 @@ public class PlayerProfile extends HttpServlet {
         GenericDao playerDao = new GenericDao(Player.class);
         Player player = (Player) playerDao.getById(Integer.parseInt(req.getParameter("id")));
         req.setAttribute("player", player);
+
+        LoggedInUser helper = new LoggedInUser();
+        User loggedInUser = helper.getLoggedInUser(req);
+
+        if (loggedInUser != null) {
+            if (loggedInUser.getFavoritePlayers().contains(player)) {
+                req.setAttribute("favoritePlayer", "true");
+            }
+        }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/playerProfile.jsp");
         dispatcher.forward(req, resp);

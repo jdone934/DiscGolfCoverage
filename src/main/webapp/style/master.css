@@ -10,7 +10,7 @@
     margin-top: 2em;
 }
 
-.addButton:hover {
+.addButton:hover, .favoriteButton:hover {
     cursor: pointer;
 }
 

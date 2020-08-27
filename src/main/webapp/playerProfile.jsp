@@ -1,6 +1,8 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/toggleFavorite.js"></script>
 </head>
 <body class="container-fluid">
     <%@include file="template/navbar.jsp"%>
@@ -8,11 +10,11 @@
     <h1>${player.firstName} ${player.lastName}</h1>
     <c:if test="${not empty pageContext.request.getRemoteUser()}">
         <c:if test="${not empty favoritePlayer}">
-            <i class="material-icons" onclick="toggleFavorite(${player.playerId})">favorite</i>
+            <i class="material-icons favoriteButton" id="player${player.playerId}">favorite</i>
         </c:if>
 
         <c:if test="${empty favoritePlayer}">
-            <i class="material-icons" onclick="toggleFavorite(${player.playerId})">favorite_border</i>
+            <i class="material-icons favoriteButton" id="player${player.playerId}">favorite_border</i>
         </c:if>
     </c:if>
     <c:if test="${not empty player.roundsPlayedIn}">
