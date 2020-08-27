@@ -64,6 +64,24 @@
         </table>
     </div>
     </c:if>
+
+    <c:if test="${not empty user.favoriteCourses}">
+        <h2 class="text-center">Favorite Courses</h2>
+        <div class="row">
+            <table class="table table-striped col-12 col-sm-8 offset-sm-2">
+                <c:forEach var="course" items="${user.favoriteCourses}">
+                    <tr>
+                        <td>
+                            <a href="viewCourse?id=${course.courseId}">${course.name}</a>
+                        </td>
+                        <td>
+                            <i class="material-icons favoriteButton" id="course${course.courseId}">favorite</i>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:if>
 </div>
 </body>
 </html>
