@@ -1,5 +1,6 @@
 package com.doney.controller;
 
+import com.doney.entity.Course;
 import com.doney.entity.Player;
 import com.doney.entity.User;
 import com.doney.persistence.GenericDao;
@@ -40,20 +41,40 @@ public class ToggleFavorite extends HttpServlet {
                 GenericDao playerDao = new GenericDao(Player.class);
                 Player player = (Player) playerDao.getById(id);
 
-                Set<Player> favorites = user.getFavoritePlayers();
-                String toggleType;
-                if (favorites.contains(player)) {
-                    favorites.remove(player);
-                    toggleType = "removed";
+                Set<Player> favoritePlayers = user.getFavoritePlayers();
+                String toggleTypePlayer;
+                if (favoritePlayers.contains(player)) {
+                    favoritePlayers.remove(player);
+                    toggleTypePlayer = "removed";
                 } else {
-                    favorites.add(player);
-                    toggleType = "added";
+                    favoritePlayers.add(player);
+                    toggleTypePlayer = "added";
                 }
 
-                logger.info("User " + user.getUserId() + " " + toggleType + " " + player.getFirstName() + " "
+                logger.info("User " + user.getUserId() + " " + toggleTypePlayer + " " + player.getFirstName() + " "
                                 + player.getLastName() + " as a favorite");
 
-                user.setFavoritePlayers(favorites);
+                user.setFavoritePlayers(favoritePlayers);
+                userDao.saveOrUpdate(user);
+                break;
+
+            case "course":
+                GenericDao courseDao = new GenericDao(Course.class);
+                Course course = (Course) courseDao.getById(id);
+
+                Set<Course> favoriteCourses = user.getFavoriteCourses();
+                String toggleTypeCourse;
+                if (favoriteCourses.contains(course)) {
+                    favoriteCourses.remove(course);
+                    toggleTypeCourse = "removed";
+                } else {
+                    favoriteCourses.add(course);
+                    toggleTypeCourse = "added";
+                }
+
+                logger.info("User " + user.getUserId() + " " + toggleTypeCourse + " " + course.getName() + " as a favorite");
+
+                user.setFavoriteCourses(favoriteCourses);
                 userDao.saveOrUpdate(user);
                 break;
         }

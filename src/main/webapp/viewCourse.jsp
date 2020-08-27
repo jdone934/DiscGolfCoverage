@@ -8,6 +8,16 @@
     <%@include file="template/navbar.jsp"%>
     <h1 class="text-center">${course.name}</h1>
 
+    <c:if test="${not empty pageContext.request.getRemoteUser()}">
+        <c:if test="${not empty favoriteCourse}">
+            <i class="material-icons favoriteButton" id="course${course.courseId}">favorite</i>
+        </c:if>
+
+        <c:if test="${empty favoriteCourse}">
+            <i class="material-icons favoriteButton" id="course${course.courseId}">favorite_border</i>
+        </c:if>
+    </c:if>
+
     <div class="row justify-content-center">
         <c:if test="${course.locationCountry == 'US'}">
             ${course.locationCity}, ${course.locationState}
