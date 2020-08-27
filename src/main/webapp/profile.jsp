@@ -5,6 +5,7 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%@ include file="template/head.jsp"%>
+    <script src="js/toggleFavorite.js"></script>
 </head>
 <body>
 <div class="header">
@@ -45,6 +46,24 @@
             </tr>
         </table>
     </div>
+
+    <c:if test="${not empty user.favoritePlayers}">
+    <h2 class="text-center">Favorite Players</h2>
+    <div class="row">
+        <table class="table table-striped col-12 col-sm-8 offset-sm-2">
+        <c:forEach var="player" items="${user.favoritePlayers}">
+            <tr>
+                <td>
+                    <a href="playerProfile?id=${player.playerId}">${player.firstName} ${player.lastName}</a>
+                </td>
+                <td>
+                    <i class="material-icons favoriteButton" id="player${player.playerId}">favorite</i>
+                </td>
+            </tr>
+        </c:forEach>
+        </table>
+    </div>
+    </c:if>
 </div>
 </body>
 </html>
