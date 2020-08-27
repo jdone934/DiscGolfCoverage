@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserDaoTest {
     GenericDao userDao;
+    GenericDao playerDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -29,6 +30,7 @@ public class UserDaoTest {
         database.runSQL("cleandb.sql");
 
         userDao = new GenericDao(User.class);
+        playerDao = new GenericDao(Player.class);
     }
 
     @Test
@@ -108,5 +110,39 @@ public class UserDaoTest {
 
         Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
         assertEquals(true, favorites.contains(expectedPlayer));
+    }
+
+    @Test
+    void addFavoritePlayerSuccess() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Player> favorites = retrievedUser.getFavoritePlayers();
+
+        Player playerToAdd = (Player) playerDao.getById(3);
+        favorites.add(playerToAdd);
+        retrievedUser.setFavoritePlayers(favorites);
+        userDao.saveOrUpdate(retrievedUser);
+
+        User userAfterUpdate = (User) userDao.getById(1);
+        Set<Player> favoritesAfterUpdate = userAfterUpdate.getFavoritePlayers();
+
+        assertEquals(3, favoritesAfterUpdate.size());
+        assertEquals(true, favoritesAfterUpdate.contains(playerToAdd));
+    }
+
+    @Test
+    void deleteFavoritePlayerSuccess() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Player> favorites = retrievedUser.getFavoritePlayers();
+
+        Player playerToDelete = (Player) playerDao.getById(2);
+        favorites.remove(playerToDelete);
+        retrievedUser.setFavoritePlayers(favorites);
+        userDao.saveOrUpdate(retrievedUser);
+
+        User userAfterUpdate = (User) userDao.getById(1);
+        Set<Player> favoritesAfterUpdate = userAfterUpdate.getFavoritePlayers();
+
+        assertEquals(1, favoritesAfterUpdate.size());
+        assertEquals(false, favoritesAfterUpdate.contains(playerToDelete));
     }
 }

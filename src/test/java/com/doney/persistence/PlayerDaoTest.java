@@ -126,6 +126,4 @@ public class PlayerDaoTest {
 
         assertEquals(expectedRound, roundFromRetrieved);
     }
-
-
 }
