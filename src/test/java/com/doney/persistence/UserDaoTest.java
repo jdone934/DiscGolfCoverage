@@ -1,5 +1,6 @@
 package com.doney.persistence;
 
+import com.doney.entity.Player;
 import com.doney.entity.Role;
 import com.doney.entity.User;
 import com.doney.testUtils.Database;
@@ -10,7 +11,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -94,5 +94,19 @@ public class UserDaoTest {
         expectedRoles.add(new Role("user", "jdone934", retrievedUser));
 
         assertEquals(expectedRoles, retrievedRoles);
+    }
+
+    @Test
+    void getPlayerFromFavorite() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Player> favorites = retrievedUser.getFavoritePlayers();
+
+        assertEquals(2, favorites.size());
+        for(Player player : favorites) {
+            logger.info(player.toString());
+        }
+
+        Player expectedPlayer = new Player("Ricky", "Wysocki", "RickyWysocki.jpg");
+        assertEquals(true, favorites.contains(expectedPlayer));
     }
 }

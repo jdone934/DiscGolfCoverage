@@ -30,6 +30,14 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "favorite_players",
+            joinColumns = {@JoinColumn(name = "userId")},
+            inverseJoinColumns = {@JoinColumn(name = "playerId")}
+    )
+    private Set<Player> favoritePlayers = new HashSet<>();
+
     public User() {
     }
 
@@ -117,6 +125,14 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<Player> getFavoritePlayers() {
+        return favoritePlayers;
+    }
+
+    public void setFavoritePlayers(Set<Player> favoritePlayers) {
+        this.favoritePlayers = favoritePlayers;
     }
 
     @Override

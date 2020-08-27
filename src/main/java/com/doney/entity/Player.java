@@ -37,6 +37,9 @@ public class Player {
     @JsonIgnore
     private Set<Commentators> roundsCommentatedIn = new HashSet<>();
 
+    @ManyToMany(mappedBy = "favoritePlayers")
+    private Set<User> favoritedBy = new HashSet<>();
+
     public Player() {
     }
 
@@ -122,9 +125,17 @@ public class Player {
                 profilePicture.equals(player.profilePicture);
     }
 
+    public Set<User> getFavoritedBy() {
+        return favoritedBy;
+    }
+
+    public void setFavoritedBy(Set<User> favoritedBy) {
+        this.favoritedBy = favoritedBy;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(playerId, firstName, lastName);
+        return Objects.hash(firstName, lastName);
     }
 
     @Override

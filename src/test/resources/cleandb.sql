@@ -221,3 +221,8 @@ INSERT INTO
     VALUES (1, 'admin', 'jdone934', 1),
            (2, 'user', 'jdone934', 1),
            (3, 'user', 'lktucker', 2);
+
+INSERT INTO
+    favorite_players (playerId, userId)
+    VALUES (1, 1),
+           (2, 1);

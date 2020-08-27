@@ -6,6 +6,15 @@
     <%@include file="template/navbar.jsp"%>
 
     <h1>${player.firstName} ${player.lastName}</h1>
+    <c:if test="${not empty pageContext.request.getRemoteUser()}">
+        <c:if test="${not empty favoritePlayer}">
+            <i class="material-icons" onclick="toggleFavorite(${player.playerId})">favorite</i>
+        </c:if>
+
+        <c:if test="${empty favoritePlayer}">
+            <i class="material-icons" onclick="toggleFavorite(${player.playerId})">favorite_border</i>
+        </c:if>
+    </c:if>
     <c:if test="${not empty player.roundsPlayedIn}">
         <h2>Rounds Played In</h2>
         <c:forEach var="roundPlayedIn" items="${player.roundsPlayedIn}" varStatus="loop">
