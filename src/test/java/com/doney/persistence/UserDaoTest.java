@@ -1,5 +1,6 @@
 package com.doney.persistence;
 
+import com.doney.entity.Course;
 import com.doney.entity.Player;
 import com.doney.entity.Role;
 import com.doney.entity.User;
@@ -10,6 +11,7 @@ import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class UserDaoTest {
     GenericDao userDao;
     GenericDao playerDao;
+    GenericDao courseDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -31,6 +34,7 @@ public class UserDaoTest {
 
         userDao = new GenericDao(User.class);
         playerDao = new GenericDao(Player.class);
+        courseDao = new GenericDao(Course.class);
     }
 
     @Test
@@ -144,5 +148,48 @@ public class UserDaoTest {
 
         assertEquals(1, favoritesAfterUpdate.size());
         assertEquals(false, favoritesAfterUpdate.contains(playerToDelete));
+    }
+
+    @Test
+    void getCourseFromFavorite() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Course> favorites = retrievedUser.getFavoriteCourses();
+
+        assertEquals(1, favorites.size());
+
+        Course expectedCourse = new Course("Ledgestone", "Eureka", "IL", "US");
+        assertEquals(true, favorites.contains(expectedCourse));
+    }
+
+    @Test
+    void insertFavoriteCourseSuccess() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Course> favorites = retrievedUser.getFavoriteCourses();
+
+        Course newCourse = (Course) courseDao.getById(2);
+        favorites.add(newCourse);
+        retrievedUser.setFavoriteCourses(favorites);
+        userDao.saveOrUpdate(retrievedUser);
+
+        User userAfterUpdate = (User) userDao.getById(1);
+        Set<Course> favoritesAfterUpdate = userAfterUpdate.getFavoriteCourses();
+        assertEquals(2, favoritesAfterUpdate.size());
+        assertEquals(true, favoritesAfterUpdate.contains(newCourse));
+    }
+
+    @Test
+    void deleteFavoriteCourseSuccess() {
+        User retrievedUser = (User) userDao.getById(1);
+        Set<Course> favorites = retrievedUser.getFavoriteCourses();
+
+        Course courseToDelete = (Course) courseDao.getById(1);
+        favorites.remove(courseToDelete);
+        retrievedUser.setFavoriteCourses(favorites);
+        userDao.saveOrUpdate(retrievedUser);
+
+        User userAfterUpdate = (User) userDao.getById(1);
+        Set<Course> favoritesAfterUpdate = userAfterUpdate.getFavoriteCourses();
+        assertEquals(0, favoritesAfterUpdate.size());
+        assertEquals(false, favoritesAfterUpdate.contains(courseToDelete));
     }
 }

@@ -35,6 +35,9 @@ public class Course {
     @JsonIgnore
     private Set<TournamentAtCourse> tournamentsAtCourse = new HashSet<>();
 
+    @ManyToMany(mappedBy = "favoriteCourses")
+    private Set<User> favoritedBy = new HashSet<>();
+
     public Course() {
     }
 
@@ -120,6 +123,14 @@ public class Course {
 
     public void setTournamentsAtCourse(Set<TournamentAtCourse> tournamentsAtCourse) {
         this.tournamentsAtCourse = tournamentsAtCourse;
+    }
+
+    public Set<User> getFavoritedBy() {
+        return favoritedBy;
+    }
+
+    public void setFavoritedBy(Set<User> favoritedBy) {
+        this.favoritedBy = favoritedBy;
     }
 
     @Override

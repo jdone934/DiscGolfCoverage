@@ -38,6 +38,14 @@ public class User {
     )
     private Set<Player> favoritePlayers = new HashSet<>();
 
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "favorite_courses",
+            joinColumns = {@JoinColumn(name = "userId")},
+            inverseJoinColumns = {@JoinColumn(name = "courseId")}
+    )
+    private Set<Course> favoriteCourses = new HashSet<>();
+
     public User() {
     }
 
@@ -133,6 +141,14 @@ public class User {
 
     public void setFavoritePlayers(Set<Player> favoritePlayers) {
         this.favoritePlayers = favoritePlayers;
+    }
+
+    public Set<Course> getFavoriteCourses() {
+        return favoriteCourses;
+    }
+
+    public void setFavoriteCourses(Set<Course> favoriteCourses) {
+        this.favoriteCourses = favoriteCourses;
     }
 
     @Override

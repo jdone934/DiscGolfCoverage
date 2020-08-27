@@ -226,3 +226,7 @@ INSERT INTO
     favorite_players (playerId, userId)
     VALUES (1, 1),
            (2, 1);
+
+INSERT INTO
+    favorite_courses (courseId, userId)
+    VALUES (1, 1);
