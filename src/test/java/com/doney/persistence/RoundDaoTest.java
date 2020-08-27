@@ -38,14 +38,14 @@ public class RoundDaoTest {
     @Test
     void getByIdSuccess() {
         Round retrievedRound = (Round) roundDao.getById(1);
-        Round expectedRound = new Round( 2, "front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
+        Round expectedRound = new Round( 2, "Front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
 
         assertEquals(expectedRound, retrievedRound);
     }
 
     @Test
     void insertSuccess() {
-        Round newRound = new Round(3, "front", 9,"testLinkBack9", "JomezPro", null,(Tournament) tournamentDao.getById(1));
+        Round newRound = new Round(3, "Front", 9,"testLinkBack9", "JomezPro", null,(Tournament) tournamentDao.getById(1));
         int id = roundDao.insert(newRound);
         assertNotEquals(0, id);
         newRound.setRoundId(id);
@@ -55,7 +55,7 @@ public class RoundDaoTest {
 
     @Test
     void updateSuccess() {
-        Round expectedRound = new Round(2, "front", 9,"newTestLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
+        Round expectedRound = new Round(2, "Front", 9,"newTestLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
         Round roundToUpdate = (Round) roundDao.getById(1);
         roundToUpdate.setCoverageLink("newTestLink");
         roundDao.saveOrUpdate(roundToUpdate);
@@ -160,7 +160,7 @@ public class RoundDaoTest {
 
         Player expectedPlayer1 = (Player) playerDao.getById(5);
         Player expectedPlayer2 = (Player) playerDao.getById(6);
-        Round expectedRound = new Round(3, "front", 9,"https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s", "JomezPro", null, (Tournament) tournamentDao.getById(1));
+        Round expectedRound = new Round(3, "Front", 9,"https://www.youtube.com/watch?v=h_whNud9KcM&list=PLZ1LrAadOyA0hTObHHKKHf2ezlUho4gDW&index=6&t=0s", "JomezPro", null, (Tournament) tournamentDao.getById(1));
 
         expectedCommentators.add(new Commentators(1, expectedRound, expectedPlayer1));
         expectedCommentators.add(new Commentators(2, expectedRound, expectedPlayer2));

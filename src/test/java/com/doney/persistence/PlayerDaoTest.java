@@ -108,7 +108,7 @@ public class PlayerDaoTest {
 
     @Test
     void findRoundsPlayerInSuccess() {
-        Round expectedRound = new Round( 2, "front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
+        Round expectedRound = new Round( 2, "Front", 9, "testLink", "JomezPro", null, (Tournament) tournamentDao.getById(1));
         Player retrievedPlayer = (Player) playerDao.getById(1);
         Set<PlayersInRound> roundsPlayedIn = retrievedPlayer.getRoundsPlayedIn();
 
