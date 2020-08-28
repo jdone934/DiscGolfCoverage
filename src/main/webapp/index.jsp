@@ -9,7 +9,7 @@
 <div class="container-fluid">
     <%@include file="template/navbar.jsp"%>
 
-    <h1>Find Coverage</h1>
+    <h1 class="text-center">Find Coverage</h1>
 
     <form id="findCoverage" method="post" action="searchByPlayer" class="" onsubmit="">
         <div id="errorMessage"></div>

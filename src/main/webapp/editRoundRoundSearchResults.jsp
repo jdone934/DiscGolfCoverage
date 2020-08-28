@@ -17,11 +17,11 @@
 </div>
 
 <div class="editRecipesResults container">
-    <h1>Rounds</h1>
+    <h1 class="text-center">Rounds</h1>
     <c:forEach var="round" items="${rounds}" varStatus="loop">
-        <div class="row">
+        <p class="text-center">
             <a href="editRound?roundId=${round.roundId}">${round.tournament.name} ${round.frontVsBack} ${round.numberOfHoles} by ${round.coverageProvider}</a>
-        </div>
+        </p>
     </c:forEach>
 </div>
 
