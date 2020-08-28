@@ -15,7 +15,7 @@
                 src="${embedUrl}"></iframe>
     </div>
     <h2 class="text-center">Players in Round</h2>
-    <div class="row">
+    <div class="d-flex justify-content-center">
         <c:forEach var="playerFromList" items="${round.playersInRound}">
             <c:set var="player" value="${playerFromList.player}" />
             <c:if test="${not empty user}">
@@ -28,7 +28,7 @@
     </div>
 
     <h2 class="text-center">Commentators</h2>
-    <div class="row">
+    <div class="d-flex justify-content-center">
         <c:forEach var="commentatorsList" items="${round.commentators}">
             <c:set var="commentator" value="${commentatorsList.player}" />
             <c:if test="${not empty user}">

@@ -8,6 +8,7 @@
     <%@include file="template/navbar.jsp"%>
 
     <h1 class="text-center">${player.firstName} ${player.lastName}</h1>
+    <img src="playerProfilePictures/${player.firstName}${player.lastName}.jpg" class="profilePagePicture mx-auto d-block"/>
     <c:if test="${not empty pageContext.request.getRemoteUser()}">
         <c:if test="${not empty favoritePlayer}">
             <i class="material-icons favoriteButton" id="player${player.playerId}">favorite</i>
@@ -31,9 +32,11 @@
     <c:if test="${not empty player.roundsCommentatedIn}">
         <h2 class="text-center">Rounds Commentated On</h2>
         <c:forEach var="roundsCommentatedOn" items="${player.roundsCommentatedIn}">
-            <c:set var="round" value="${roundsCommentatedOn.round}" />
-            <c:set var="tournament" value="${round.tournament}" />
-            <a href="viewRound?id=${round.roundId}">${tournament.name} (${tournament.year}): Round ${round.roundNumber} ${round.frontVsBack} ${round.numberOfHoles}</a> </br>
+            <p class="text-center">
+                <c:set var="round" value="${roundsCommentatedOn.round}" />
+                <c:set var="tournament" value="${round.tournament}" />
+                <a href="viewRound?id=${round.roundId}">${tournament.name} (${tournament.year}): Round ${round.roundNumber} ${round.frontVsBack} ${round.numberOfHoles}</a> </br>
+            </p>
         </c:forEach>
     </c:if>
 </body>

@@ -12,7 +12,7 @@
         <c:if test="${not empty players}">
             <h1 class="text-center">Players Found</h1>
         </c:if>
-        <div class="row">
+        <div class="d-flex justify-content-center flex-wrap">
             <c:forEach var="player" items="${players}" varStatus="loop">
                 <c:if test="${not empty user}">
                     <jd:playerCard player="${player}" user="${user}"/>
