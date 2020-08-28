@@ -1,5 +1,6 @@
-const init = () => {
+const searchCourseInit = () => {
     document.querySelector("#searchForCourses").addEventListener("click", searchCourses);
+    nextPageInit();
 }
 
 const searchCourses = async() => {
@@ -96,4 +97,4 @@ const courseLinkBuilder = (course, addOrRemove) => {
     return courseToBuild;
 }
 
-window.onload = init;
+window.onload = searchCourseInit;

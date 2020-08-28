@@ -31,3 +31,15 @@ h1 {
     height: 33%;
     width: auto;
 }
+
+#newRoundSubmit, #newTournamentSubmit {
+    margin-top: 3em;
+}
+
+.nextPage {
+    float: right;
+}
+
+.nextPageMargin {
+    margin-top: 3em;
+}

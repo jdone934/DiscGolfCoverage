@@ -3,6 +3,7 @@
     <%@include file="template/head.jsp" %>
     <script src="/DiscGolfCoverage/js/searchTournament.js" charset="utf-8"></script>
     <script src="/DiscGolfCoverage/js/searchPlayer.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/nextPage.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -64,6 +65,8 @@
 
         </div>
 
+        <h2>Find Tournament</h2>
+
         <div class="form-group">
             <label for="tournamentSearch">Tournament</label>
             <input type="text" class="form-control" name="tournamentSearch" id="tournamentSearch">
@@ -75,8 +78,10 @@
         </div>
 
         <div id="addedTournament">
-            <h2>Added Tournament</h2>
+            <h3>Added Tournament</h3>
         </div>
+
+        <h2>Find Player(s)</h2>
 
         <div class="form-group">
             <label for="playerFirstName">Player First Name</label>
@@ -91,8 +96,10 @@
         </div>
 
         <div id="addedPlayers">
-            <h2>Added Players</h2>
+            <h3>Added Player(s)</h3>
         </div>
+
+        <h2>Find Commentator(s)</h2>
 
         <div class="form-group">
             <label for="commentatorFirstName">Commentator First Name</label>
@@ -107,13 +114,12 @@
         </div>
 
         <div id="addedCommentators">
-            <h2>Added Commentators</h2>
+            <h3>Added Commentator(s)</h3>
         </div>
 
-        <button type="submit" id="submitButton" class="btn btn-primary">Add Round</button>
+        <button type="submit" id="newRoundSubmit" class="btn btn-primary">Add Round</button>
+        <div class="btn btn-primary nextPage nextPageMargin" id="home">Admin Home</div>
     </form>
-
-    <a href="newRound">Add new coverage of a round</a>
 </div>
 </body>
 </html>

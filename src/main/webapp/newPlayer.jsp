@@ -1,10 +1,9 @@
 <html>
 <head>
     <%@include file="template/head.jsp" %>
-    <script src="js/formControl.js"></script>
-    <link rel="stylesheet" href="style/searchForm.css" />
+    <script src="../js/nextPage.js" charset="utf-8"></script>
 </head>
-<body>
+<body onload="nextPageInit()">
 <div class="container-fluid">
     <%@include file="template/navbar.jsp"%>
 
@@ -42,9 +41,8 @@
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+        <div class="btn btn-primary nextPage" id="newCourse">Add New Course</div>
     </form>
-
-    <a href="newCourse">Add a new Course</a>
 </div>
 </body>
 </body>

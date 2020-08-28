@@ -2,10 +2,9 @@
 <head>
     <%@include file="template/head.jsp" %>
     <%@taglib uri="http://doneyTag.com/tags" prefix="jd" %>
-    <script src="js/formControl.js"></script>
-    <link rel="stylesheet" href="style/searchForm.css" />
+    <script src="../js/nextPage.js" charset="utf-8"></script>
 </head>
-<body>
+<body onload="nextPageInit()">
 <div class="container-fluid">
     <%@include file="template/navbar.jsp"%>
 
@@ -50,9 +49,8 @@
         </div>
 
         <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+        <div class="btn btn-primary nextPage" id="newTournament">Add New Tournament</div>
     </form>
-
-    <a href="newTournament">Add a new Tournament</a>
 </div>
 </body>
 </body>

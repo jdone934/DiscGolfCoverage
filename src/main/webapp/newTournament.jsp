@@ -2,6 +2,7 @@
 <head>
     <%@include file="template/head.jsp" %>
     <script src="/DiscGolfCoverage/js/searchCourse.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/nextPage.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -51,6 +52,8 @@
                    <c:if test="${not empty website}">value="${website}" </c:if>>
         </div>
 
+        <h2>Find Course(s)</h2>
+
         <div class="form-group">
             <label for="courseSearch">Courses</label>
             <input type="text" class="form-control" name="courseSearch" id="courseSearch">
@@ -62,13 +65,12 @@
         </div>
 
         <div id="addedCourses">
-            <h2>Added Courses</h2>
+            <h3>Added Course(s)</h3>
         </div>
 
-        <button type="submit" id="submitButton" class="btn btn-primary">Add Tournament</button>
+        <button type="submit" id="newTournamentSubmit" class="btn btn-primary">Add Tournament</button>
+        <div class="btn btn-primary nextPage nextPageMargin" id="newRound">Add New Round</div>
     </form>
-
-    <a href="newRound">Add new coverage of a round</a>
 </div>
 </body>
 </html>
