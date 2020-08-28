@@ -10,21 +10,23 @@
 
     <c:if test="${searchType == 'player'}">
         <c:if test="${not empty players}">
-            <h1>Players Found</h1>
+            <h1 class="text-center">Players Found</h1>
         </c:if>
-        <c:forEach var="player" items="${players}" varStatus="loop">
-            <c:if test="${not empty user}">
-                <jd:playerCard player="${player}" user="${user}"/>
-            </c:if>
-            <c:if test="${empty user}">
-                <jd:playerCard player="${player}"/>
-            </c:if>
-        </c:forEach>
+        <div class="row">
+            <c:forEach var="player" items="${players}" varStatus="loop">
+                <c:if test="${not empty user}">
+                    <jd:playerCard player="${player}" user="${user}"/>
+                </c:if>
+                <c:if test="${empty user}">
+                    <jd:playerCard player="${player}"/>
+                </c:if>
+            </c:forEach>
+        </div>
     </c:if>
 
     <c:if test="${searchType == 'tournament'}">
         <c:if test="${not empty tournaments}">
-            <h1>Tournaments Found</h1>
+            <h1 class="text-center">Tournaments Found</h1>
         </c:if>
         <c:forEach var="tournament" items="${tournaments}" varStatus="loop">
             <div class="row">
@@ -47,7 +49,7 @@
 
     <c:if test="${searchType == 'course'}">
         <c:if test="${not empty courses}">
-            <h1>Courses Found</h1>
+            <h1 class="text-center">Courses Found</h1>
         </c:if>
         <c:forEach var="course" items="${courses}" varStatus="loop">
             <a href="viewCourse?id=${course.courseId}">

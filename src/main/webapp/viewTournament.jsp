@@ -5,10 +5,10 @@
 <body class="container-fluid">
     <%@include file="template/navbar.jsp"%>
 
-    <h1>${tournament.name}</h1>
+    <h1 class="text-center">${tournament.name}</h1>
 
     <c:if test="${not empty tournament.rounds}">
-        <h2>Rounds</h2>
+        <h2 class="text-center">Rounds</h2>
         <c:forEach var="round" items="${tournament.rounds}">
             <div class="row">
                 <div class="col-4">
