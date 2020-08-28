@@ -35,7 +35,8 @@ public class Course {
     @JsonIgnore
     private Set<TournamentAtCourse> tournamentsAtCourse = new HashSet<>();
 
-    @ManyToMany(mappedBy = "favoriteCourses")
+    @ManyToMany(mappedBy = "favoriteCourses", fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<User> favoritedBy = new HashSet<>();
 
     public Course() {

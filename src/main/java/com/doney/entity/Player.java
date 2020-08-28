@@ -37,7 +37,9 @@ public class Player {
     @JsonIgnore
     private Set<Commentators> roundsCommentatedIn = new HashSet<>();
 
-    @ManyToMany(mappedBy = "favoritePlayers")
+    @ManyToMany(mappedBy = "favoritePlayers", fetch = FetchType.EAGER)
+    @JsonIgnore
+
     private Set<User> favoritedBy = new HashSet<>();
 
     public Player() {

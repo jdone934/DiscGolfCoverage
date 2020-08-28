@@ -29,21 +29,17 @@
             <h1 class="text-center">Tournaments Found</h1>
         </c:if>
         <c:forEach var="tournament" items="${tournaments}" varStatus="loop">
-            <div class="row">
-                <div class="col-4">
-                    <a href="viewTournament?id=${tournament.tournamentId}">${tournament.name}: ${tournament.year}</a>
-                </div>
-                <div class="col-4 offset-4">
-                    <div class="row">
-                        <c:forEach var="courseList" items="${tournament.coursesAtTournament}">
-                            <c:set var="course" value="${courseList.course}" />
-                            <div class="col-12">
-                                <a href="viewCourse?id=${course.courseId}">${course.name}</a>
-                            </div>
-                        </c:forEach>
-                    </div>
-                </div>
-            </div>
+            <p class="text-center">
+                <a href="viewTournament?id=${tournament.tournamentId}">${tournament.name}: ${tournament.year}</a>
+                played at
+                <c:forEach var="courseConnector" items="${tournament.coursesAtTournament}">
+                    <c:set var="course" value="${courseConnector.course}" />
+                    <a href="viewCourse?id=${course.courseId}">${course.name}</a>
+                    <c:if test="${!loop.last}">
+                        ,&nbsp;
+                    </c:if>
+                </c:forEach>
+            </p>
         </c:forEach>
     </c:if>
 
