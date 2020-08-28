@@ -32,12 +32,9 @@
             <p class="text-center">
                 <a href="viewTournament?id=${tournament.tournamentId}">${tournament.name}: ${tournament.year}</a>
                 played at
-                <c:forEach var="courseConnector" items="${tournament.coursesAtTournament}">
+                <c:forEach var="courseConnector" items="${tournament.coursesAtTournament}" varStatus="courseLoop">
                     <c:set var="course" value="${courseConnector.course}" />
-                    <a href="viewCourse?id=${course.courseId}">${course.name}</a>
-                    <c:if test="${!loop.last}">
-                        ,&nbsp;
-                    </c:if>
+                    <a href="viewCourse?id=${course.courseId}">${course.name}</a><c:if test="${! courseLoop.last}">,&nbsp;</c:if>
                 </c:forEach>
             </p>
         </c:forEach>

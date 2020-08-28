@@ -17,7 +17,6 @@
                     </a>
                 </div>
                 <div class="col-4">
-                    Put stuff for which card (if filled in)
                 </div>
                 <div class="col-4">
                     ${round.coverageProvider}

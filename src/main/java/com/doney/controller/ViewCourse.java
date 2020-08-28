@@ -28,9 +28,11 @@ public class ViewCourse extends HttpServlet {
 
         LoggedInUser helper = new LoggedInUser();
         User user = helper.getLoggedInUser(req);
-        Set<Course> favorites = user.getFavoriteCourses();
-        if (favorites.contains(course)) {
-            req.setAttribute("favoriteCourse", true);
+        if (user != null) {
+            Set<Course> favorites = user.getFavoriteCourses();
+            if (favorites.contains(course)) {
+                req.setAttribute("favoriteCourse", true);
+            }
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/viewCourse.jsp");
