@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%@ include file="template/head.jsp"%>
     <link rel="stylesheet" href="../style/adminSearchForm.css">
-    <script src="../js/adminHomeFormControl.js"></script>
 </head>
 <body>
 <div class="header">
     <%@ include file="template/navbar.jsp"%>
     <div class="display-4 text-center">
-        Edit Recipes Search Results
+        Edit Round Search Results
     </div>
 </div>
 
@@ -20,7 +19,8 @@
     <h1 class="text-center">Rounds</h1>
     <c:forEach var="round" items="${rounds}" varStatus="loop">
         <p class="text-center">
-            <a href="editRound?roundId=${round.roundId}">${round.tournament.name} ${round.frontVsBack} ${round.numberOfHoles} by ${round.coverageProvider}</a>
+            <a href="editRound?roundId=${round.roundId}">${round.tournament.name}: Round ${round.roundNumber} ${round.frontVsBack}
+                    ${round.numberOfHoles} by ${round.coverageProvider}</a>
         </p>
     </c:forEach>
 </div>

@@ -7,17 +7,18 @@
 <body class="container-fluid">
     <%@include file="template/navbar.jsp"%>
 
-    <div class="row">
-        <h1 class="text-center col-11">${player.firstName} ${player.lastName}</h1>
+    <div>
+        <h1 class="text-center">${player.firstName} ${player.lastName}&nbsp;
         <c:if test="${not empty pageContext.request.getRemoteUser()}">
             <c:if test="${not empty favoritePlayer}">
-                <i class="material-icons favoriteButton col-1" id="player${player.playerId}">favorite</i>
+                <i class="material-icons favoriteButton" id="player${player.playerId}">favorite</i>
             </c:if>
 
             <c:if test="${empty favoritePlayer}">
-                <i class="material-icons favoriteButton col-1" id="player${player.playerId}">favorite_border</i>
+                <i class="material-icons favoriteButton" id="player${player.playerId}">favorite_border</i>
             </c:if>
         </c:if>
+        </h1>
     </div>
     <img src="playerProfilePictures/${player.firstName}${player.lastName}.jpg" class="profilePagePicture mx-auto d-block"/>
     <c:if test="${not empty player.roundsPlayedIn}">

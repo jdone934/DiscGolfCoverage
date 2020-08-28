@@ -5,9 +5,10 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%@ include file="template/head.jsp"%>
+    <script src="/DiscGolfCoverage/js/editRound.js" charset="utf-8"></script>
     <script src="/DiscGolfCoverage/js/searchTournament.js" charset="utf-8"></script>
     <script src="/DiscGolfCoverage/js/searchPlayer.js" charset="utf-8"></script>
-    <script src="/DiscGolfCoverage/js/editRound.js" charset="utf-8"></script>
+    <script src="/DiscGolfCoverage/js/editRoundInit.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>

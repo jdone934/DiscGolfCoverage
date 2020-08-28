@@ -6,7 +6,7 @@
 </head>
 <body>
     <%@include file="template/navbar.jsp"%>
-    <h1 class="text-center">${course.name}</h1>
+    <h1 class="text-center">${course.name}&nbsp;
 
     <c:if test="${not empty pageContext.request.getRemoteUser()}">
         <c:if test="${not empty favoriteCourse}">
@@ -17,6 +17,7 @@
             <i class="material-icons favoriteButton" id="course${course.courseId}">favorite_border</i>
         </c:if>
     </c:if>
+    </h1>
 
     <div class="row justify-content-center">
         <c:if test="${course.locationCountry == 'US'}">

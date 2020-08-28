@@ -1,7 +1,6 @@
 const playerInit = () => {
     document.querySelector("#searchForPlayers").addEventListener("click", searchPlayers);
     document.querySelector("#searchForCommentators").addEventListener("click", searchCommentators);
-    nextPageInit();
 }
 
 const searchPlayers = async() => {
@@ -136,7 +135,7 @@ const playerLinkBuilder = (player, addOrRemove, playerOrCommentator) => {
 }
 
 window.onload = () => {
+    editRoundInit();
     tournamentInit();
     playerInit();
-    editRoundInit();
 };

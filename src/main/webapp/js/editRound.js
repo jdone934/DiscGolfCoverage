@@ -8,11 +8,6 @@ const editRoundInit = () => {
 const deleteRound = () => {
     let confirmStatus = confirm("Are you sure?");
     if (confirmStatus == true) {
-        //console.log("Yes I'm sure");
-        let queryString = window.location.search;
-        let urlParams = new URLSearchParams(queryString);
-
-
         window.location.replace(`deleteRound?roundId=${document.querySelector("#roundId").value}`);
     }
 }
